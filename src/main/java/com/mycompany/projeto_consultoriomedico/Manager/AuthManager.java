@@ -5,6 +5,26 @@ import org.json.JSONObject;
 
 public class AuthManager {
 
+    // Método para obter a role do usuário logado
+    public static String getUserRole() {
+        // Endpoint da API para pegar a role
+        String endpoint = "/auth/role";
+        String response = HttpService.sendGetRequest(endpoint, true);
+
+        // Exibindo a resposta recebida para debug
+        System.out.println("Resposta da API para getUserRole(): " + response);
+
+        // Verifica se a resposta não está vazia
+        if (response == null || response.trim().isEmpty()) {
+            return "Resposta vazia da API!";
+        }
+
+        // Nesse caso, como a resposta já é diretamente a role, retornamos ela diretamente
+        return response.trim();  // Remove espaços em branco ao redor da string, se houver
+    }
+
+
+
     // Método para registrar um administrador
     public static String registerAdmin(String nome, String cpf, String login, String password) {
         String endpoint = "/auth/admin/register";

@@ -72,10 +72,9 @@ public class TELA_LOGIN_ADM extends javax.swing.JFrame {
         JLBsenha.setForeground(new java.awt.Color(101, 98, 98));
         JLBsenha.setText("Senha");
 
-        JLBusuario.setBackground(new java.awt.Color(88, 93, 96));
+        JLBusuario.setBackground(new java.awt.Color(0, 0, 0));
         JLBusuario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        JLBusuario.setForeground(new java.awt.Color(101, 98, 98));
-        JLBusuario.setText("LOGIN ADMINISTRADOR");
+        JLBusuario.setText("Acesso ao Sistema");
 
         JTFsenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,14 +117,7 @@ public class TELA_LOGIN_ADM extends javax.swing.JFrame {
         JLBmensagemContato.setForeground(new java.awt.Color(255, 255, 255));
         JLBmensagemContato.setText("Conecte-se conosco: entre em contato ou siga nossas redes sociais!");
 
-        JLBiconHospital.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Desktop\\ICONS\\icons8-hospital-64.png")); // NOI18N
         JLBiconHospital.setLabelFor(JLBiconHospital);
-
-        JLBemail.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Desktop\\ICONS\\icons8-nova-mensagem-50.png")); // NOI18N
-
-        JLBfacebook.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Desktop\\ICONS\\icons8-facebook-50.png")); // NOI18N
-
-        JLBinstagram.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Desktop\\ICONS\\icons8-instagram-50.png")); // NOI18N
 
         javax.swing.GroupLayout Panel_LoginADM_DireitaLayout = new javax.swing.GroupLayout(Panel_LoginADM_Direita);
         Panel_LoginADM_Direita.setLayout(Panel_LoginADM_DireitaLayout);
@@ -177,15 +169,12 @@ public class TELA_LOGIN_ADM extends javax.swing.JFrame {
         );
 
         JBTalterarUser.setBackground(new java.awt.Color(245, 245, 245));
-        JBTalterarUser.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Desktop\\ICONS\\icons8-alterar-usuário-masculino-50.png")); // NOI18N
         JBTalterarUser.setBorder(null);
         JBTalterarUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JBTalterarUserActionPerformed(evt);
             }
         });
-
-        JLBiconADM.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Desktop\\ICONS\\icons8-administrador-64.png")); // NOI18N
 
         javax.swing.GroupLayout Panel_LoginADM_EsquerdaLayout = new javax.swing.GroupLayout(Panel_LoginADM_Esquerda);
         Panel_LoginADM_Esquerda.setLayout(Panel_LoginADM_EsquerdaLayout);
@@ -281,14 +270,22 @@ public class TELA_LOGIN_ADM extends javax.swing.JFrame {
 
         // Chama o método de login da AuthManager para tentar autenticar o usuário
         String resultadoLogin = AuthManager.login(usuario, senha);
+
         // Verifica o resultado do login
         if (resultadoLogin.contains("Login bem-sucedido!")) {
-            // O login foi bem-sucedido, então o token foi armazenado
-            JOptionPane.showMessageDialog(this, "Login realizado com sucesso!");
-            
-            // Exemplo: se o login for bem-sucedido, você pode abrir a próxima tela ou fechar esta tela
-            new TELA_CENTRAL_ADM().setVisible(true);  // Altere para o nome da próxima tela
-            this.dispose();  // Fechar a tela de login
+            // Obtém a role do usuário autenticado usando o token
+            String role = AuthManager.getUserRole();  // Passando o token para obter a role diretamente
+            System.out.println("Role obtida: " + role);
+
+            // Verifica a role e abre a tela correspondente
+            if ("ADMIN".equals(role.trim())) {  // Removendo qualquer espaço extra antes ou depois da role
+                new TELA_CENTRAL_ADM().setVisible(true);
+                this.dispose();
+            } else if ("RECEPCIONISTA".equals(role.trim())) {
+                // new TELA_CENTRAL_RECEPCIONISTA().setVisible(true); // Tela a ser configurada posteriormente
+            }
+
+            this.dispose(); // Fecha a tela de login
         } else {
             // Caso o login falhe
             JOptionPane.showMessageDialog(this, "Falha no login! Usuário ou senha incorretos.");

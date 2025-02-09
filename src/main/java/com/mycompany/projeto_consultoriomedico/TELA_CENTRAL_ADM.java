@@ -253,11 +253,12 @@ public class TELA_CENTRAL_ADM extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void JBTvoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTvoltarActionPerformed
-        // TODO add your handling code here:
+        new TELA_LOGIN_ADM().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_JBTvoltarActionPerformed
 
     private void JBTsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTsairActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_JBTsairActionPerformed
 
     private void JBTselectMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTselectMedicoActionPerformed
