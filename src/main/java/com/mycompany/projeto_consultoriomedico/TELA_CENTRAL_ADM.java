@@ -267,7 +267,9 @@ public class TELA_CENTRAL_ADM extends javax.swing.JFrame {
     }//GEN-LAST:event_JBTselectMedicoActionPerformed
 
     private void JBTselectMedico1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTselectMedico1ActionPerformed
-        // TODO add your handling code here:
+        TELA_ADM_VIEW_ADMINISTRADOR TelaViewADM = new TELA_ADM_VIEW_ADMINISTRADOR();
+        TelaViewADM.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_JBTselectMedico1ActionPerformed
 
     /**

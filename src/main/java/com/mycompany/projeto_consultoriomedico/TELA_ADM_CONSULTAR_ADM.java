@@ -4,6 +4,10 @@
  */
 package com.mycompany.projeto_consultoriomedico;
 
+import com.mycompany.projeto_consultoriomedico.Manager.AdminManager;
+import javax.swing.JOptionPane;
+import org.json.JSONObject;
+
 /**
  *
  * @author User
@@ -59,8 +63,6 @@ public class TELA_ADM_CONSULTAR_ADM extends javax.swing.JFrame {
         JLBnomeClinica1.setForeground(new java.awt.Color(255, 255, 255));
         JLBnomeClinica1.setText("SDLEKS MED");
 
-        JLBiconeClinica.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Documents\\NetBeansProjects\\Projeto_consultorioMedico\\src\\main\\java\\com\\mycompany\\projeto_consultoriomedico\\icons8-hospital-64.png")); // NOI18N
-
         jPanel2.setBackground(new java.awt.Color(245, 245, 245));
         jPanel2.setBorder(new javax.swing.border.MatteBorder(null));
 
@@ -115,6 +117,11 @@ public class TELA_ADM_CONSULTAR_ADM extends javax.swing.JFrame {
 
         JBTsair1.setText("Consultar");
         JBTsair1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        JBTsair1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBTsair1ActionPerformed(evt);
+            }
+        });
 
         JLBsenha2.setBackground(new java.awt.Color(88, 93, 96));
         JLBsenha2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -281,6 +288,49 @@ public class TELA_ADM_CONSULTAR_ADM extends javax.swing.JFrame {
     private void JTFusuario3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFusuario3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JTFusuario3ActionPerformed
+
+    private void JBTsair1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTsair1ActionPerformed
+        // Pega o CPF digitado pelo usuário
+        String cpf = JTFusuario2.getText().trim();  
+
+        // Verifica se o CPF foi preenchido
+        if (cpf.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, informe o CPF do administrador.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Chama o método para buscar os dados do administrador pelo CPF
+        String jsonResponse = AdminManager.getAdminByCpf(cpf);
+
+        // Verifica se houve um erro na resposta
+        if (jsonResponse.startsWith("Erro") || jsonResponse.contains("não encontrado")) {
+            JOptionPane.showMessageDialog(this, "Administrador não encontrado ou erro na requisição.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        try {
+            // Converte a resposta JSON para um objeto JSONObject
+            JSONObject jsonObject = new JSONObject(jsonResponse);
+
+            // Extraímos os valores do JSON
+            String id = jsonObject.optString("id", "Não informado");
+            String nome = jsonObject.optString("nome", "Não informado");
+            String cpfRecebido = jsonObject.optString("cpf", "Não informado");
+            String contato = jsonObject.optString("contato", "Não informado");
+
+            // Exibe os dados no JOptionPane
+            String adminInfo = "ID: " + id + "\n" +
+                               "Nome: " + nome + "\n" +
+                               "CPF: " + cpfRecebido + "\n" +
+                               "Contato: " + contato;
+
+            JOptionPane.showMessageDialog(this, adminInfo, "Dados do Administrador", JOptionPane.INFORMATION_MESSAGE);
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Erro ao processar os dados: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+        }
+
+    }//GEN-LAST:event_JBTsair1ActionPerformed
 
     /**
      * @param args the command line arguments

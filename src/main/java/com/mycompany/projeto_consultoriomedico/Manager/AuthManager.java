@@ -72,12 +72,24 @@ public class AuthManager {
         String response = HttpService.sendPostRequest(endpoint, json.toString(), false);
 
         try {
+            System.out.println("Resposta da API: " + response);  // Imprimir resposta da API para debugar
+
             JSONObject jsonResponse = new JSONObject(response);
+
+            // Verifica se a resposta contém o campo "token" e se o token não é uma mensagem de erro
             if (jsonResponse.has("token")) {
                 String token = jsonResponse.getString("token");
+
+                // Verifica se o token é uma mensagem de erro
+                if (token.equals("Falha na autenticação!")) {
+                    return "Falha na autenticação! Usuário ou senha incorretos.";
+                }
+
+                // Se o token for válido, armazene o token
                 TokenManager.setToken(token);
                 return "Login bem-sucedido! Token armazenado.";
             } else {
+                // Se não contiver o token, retorna mensagem de erro
                 return "Erro no login: Token não encontrado na resposta.";
             }
         } catch (Exception e) {

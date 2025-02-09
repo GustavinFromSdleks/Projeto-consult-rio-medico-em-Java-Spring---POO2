@@ -4,6 +4,11 @@
  */
 package com.mycompany.projeto_consultoriomedico;
 
+import com.mycompany.projeto_consultoriomedico.Manager.AuthManager;
+import com.mycompany.projeto_consultoriomedico.Manager.TokenManager;
+import java.io.IOException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author User
@@ -264,7 +269,30 @@ public class TELA_LOGIN_ADM extends javax.swing.JFrame {
     }//GEN-LAST:event_JTFusuarioActionPerformed
 
     private void JBTentrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTentrarActionPerformed
-        // TODO add your handling code here:
+        // Obtendo os valores dos campos
+        String usuario = JTFusuario.getText();
+        String senha = JTFsenha.getText();
+
+        // Verificando se os campos não estão vazios
+        if (usuario.isEmpty() || senha.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Usuário e senha são obrigatórios!");
+            return;
+        }
+
+        // Chama o método de login da AuthManager para tentar autenticar o usuário
+        String resultadoLogin = AuthManager.login(usuario, senha);
+        // Verifica o resultado do login
+        if (resultadoLogin.contains("Login bem-sucedido!")) {
+            // O login foi bem-sucedido, então o token foi armazenado
+            JOptionPane.showMessageDialog(this, "Login realizado com sucesso!");
+            
+            // Exemplo: se o login for bem-sucedido, você pode abrir a próxima tela ou fechar esta tela
+            new TELA_CENTRAL_ADM().setVisible(true);  // Altere para o nome da próxima tela
+            this.dispose();  // Fechar a tela de login
+        } else {
+            // Caso o login falhe
+            JOptionPane.showMessageDialog(this, "Falha no login! Usuário ou senha incorretos.");
+        }
     }//GEN-LAST:event_JBTentrarActionPerformed
 
     private void JBTalterarUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTalterarUserActionPerformed

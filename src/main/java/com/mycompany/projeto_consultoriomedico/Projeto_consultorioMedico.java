@@ -12,8 +12,8 @@ public class Projeto_consultorioMedico {
 
     public static void main(String[] args) {
         
-       // TELA_LOGIN_ADM LoginADM = new TELA_LOGIN_ADM();
-       // LoginADM.setVisible(true);
+       TELA_LOGIN_ADM LoginADM = new TELA_LOGIN_ADM();
+       LoginADM.setVisible(true);
        
        //TELA_CENTRAL_ADM TelaCentralADM = new TELA_CENTRAL_ADM();
        //TelaCentralADM.setVisible(true);
@@ -73,8 +73,8 @@ public class Projeto_consultorioMedico {
         //TELA_ADM_ALTERAR_USUARIOS TelaAlterarUsuarios = new TELA_ADM_ALTERAR_USUARIOS();
         //TelaAlterarUsuarios.setVisible(true);
         
-        TELA_ADM_ALTERAR_DADOS_CONTATO TelaAlterarDadosContato = new TELA_ADM_ALTERAR_DADOS_CONTATO();
-        TelaAlterarDadosContato.setVisible(true);
+        //TELA_ADM_ALTERAR_DADOS_CONTATO TelaAlterarDadosContato = new TELA_ADM_ALTERAR_DADOS_CONTATO();
+        //TelaAlterarDadosContato.setVisible(true);
         
     }    
 }
