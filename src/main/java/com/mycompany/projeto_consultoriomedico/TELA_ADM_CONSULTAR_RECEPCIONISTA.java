@@ -4,6 +4,10 @@
  */
 package com.mycompany.projeto_consultoriomedico;
 
+import com.mycompany.projeto_consultoriomedico.Manager.RecepcionistaManager;
+import javax.swing.JOptionPane;
+import org.json.JSONObject;
+
 /**
  *
  * @author User
@@ -35,17 +39,11 @@ public class TELA_ADM_CONSULTAR_RECEPCIONISTA extends javax.swing.JFrame {
         JLBversion1 = new javax.swing.JLabel();
         JLBusuario2 = new javax.swing.JLabel();
         JTFusuario = new javax.swing.JTextField();
-        JLBusuario1 = new javax.swing.JLabel();
         JCHECKcpfRecepcionista = new javax.swing.JCheckBox();
         JLBusuario3 = new javax.swing.JLabel();
-        JTFusuario1 = new javax.swing.JTextField();
         JTFusuario2 = new javax.swing.JTextField();
         JLBusuario4 = new javax.swing.JLabel();
-        JCHECKtelefoneRecepcionista = new javax.swing.JCheckBox();
         JBTsair1 = new javax.swing.JButton();
-        JLBsenha2 = new javax.swing.JLabel();
-        JTFusuario3 = new javax.swing.JTextField();
-        JCHECKidRecepcionista = new javax.swing.JCheckBox();
         JLBversion2 = new javax.swing.JLabel();
         JBTsair2 = new javax.swing.JButton();
         JCHECKnomeRecepcionista = new javax.swing.JCheckBox();
@@ -68,6 +66,11 @@ public class TELA_ADM_CONSULTAR_RECEPCIONISTA extends javax.swing.JFrame {
 
         JBTsair.setText("Voltar");
         JBTsair.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        JBTsair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBTsairActionPerformed(evt);
+            }
+        });
 
         JLBversion1.setText("Version 0.01");
 
@@ -82,23 +85,12 @@ public class TELA_ADM_CONSULTAR_RECEPCIONISTA extends javax.swing.JFrame {
             }
         });
 
-        JLBusuario1.setBackground(new java.awt.Color(88, 93, 96));
-        JLBusuario1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        JLBusuario1.setForeground(new java.awt.Color(101, 98, 98));
-        JLBusuario1.setText("ID");
-
         JCHECKcpfRecepcionista.setText("selecionar");
 
         JLBusuario3.setBackground(new java.awt.Color(88, 93, 96));
         JLBusuario3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         JLBusuario3.setForeground(new java.awt.Color(101, 98, 98));
         JLBusuario3.setText("Nome ");
-
-        JTFusuario1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTFusuario1ActionPerformed(evt);
-            }
-        });
 
         JTFusuario2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,23 +103,13 @@ public class TELA_ADM_CONSULTAR_RECEPCIONISTA extends javax.swing.JFrame {
         JLBusuario4.setForeground(new java.awt.Color(101, 98, 98));
         JLBusuario4.setText("CPF");
 
-        JCHECKtelefoneRecepcionista.setText("selecionar");
-
         JBTsair1.setText("Consultar");
         JBTsair1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        JLBsenha2.setBackground(new java.awt.Color(88, 93, 96));
-        JLBsenha2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        JLBsenha2.setForeground(new java.awt.Color(101, 98, 98));
-        JLBsenha2.setText("Contato (telefone)");
-
-        JTFusuario3.addActionListener(new java.awt.event.ActionListener() {
+        JBTsair1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTFusuario3ActionPerformed(evt);
+                JBTsair1ActionPerformed(evt);
             }
         });
-
-        JCHECKidRecepcionista.setText("selecionar");
 
         JLBversion2.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         JLBversion2.setForeground(new java.awt.Color(88, 93, 96));
@@ -148,39 +130,30 @@ public class TELA_ADM_CONSULTAR_RECEPCIONISTA extends javax.swing.JFrame {
                         .addGap(44, 44, 44)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(JLBusuario2)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(JLBusuario1)
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(JTFusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(JCHECKnomeRecepcionista))
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(JTFusuario2, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(JCHECKcpfRecepcionista))
-                                .addComponent(JLBusuario3)
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(JTFusuario1, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(JCHECKidRecepcionista))
-                                .addComponent(JLBusuario4)
-                                .addComponent(JLBsenha2)
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(JTFusuario3, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(JCHECKtelefoneRecepcionista))
-                                .addComponent(JLBversion2))))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(JTFusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(JCHECKnomeRecepcionista))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(JTFusuario2, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(JCHECKcpfRecepcionista))
+                                    .addComponent(JLBusuario3)
+                                    .addComponent(JLBusuario4)
+                                    .addComponent(JLBversion2))
+                                .addGap(6, 6, 6))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(169, 169, 169)
-                        .addComponent(JBTsair, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(187, 187, 187)
-                        .addComponent(JLBversion1))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(109, 109, 109)
+                        .addGap(95, 95, 95)
                         .addComponent(JBTsair1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(JBTsair2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addComponent(JBTsair2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(JBTsair, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JLBversion1))))
                 .addContainerGap(62, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -199,29 +172,16 @@ public class TELA_ADM_CONSULTAR_RECEPCIONISTA extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(JCHECKcpfRecepcionista)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(JTFusuario2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(JLBusuario1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(3, 3, 3)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(JTFusuario1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(JCHECKidRecepcionista))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(JLBsenha2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(JCHECKtelefoneRecepcionista)
-                    .addComponent(JTFusuario3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JTFusuario2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(JLBversion2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JBTsair1)
                     .addComponent(JBTsair2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(JBTsair)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 181, Short.MAX_VALUE)
                 .addComponent(JLBversion1)
                 .addContainerGap())
         );
@@ -230,8 +190,6 @@ public class TELA_ADM_CONSULTAR_RECEPCIONISTA extends javax.swing.JFrame {
         JLBnomeClinica1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         JLBnomeClinica1.setForeground(new java.awt.Color(255, 255, 255));
         JLBnomeClinica1.setText("SDLEKS MED");
-
-        JLBiconeClinica.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Documents\\NetBeansProjects\\Projeto_consultorioMedico\\src\\main\\java\\com\\mycompany\\projeto_consultoriomedico\\icons8-hospital-64.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -282,17 +240,54 @@ public class TELA_ADM_CONSULTAR_RECEPCIONISTA extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JTFusuarioActionPerformed
 
-    private void JTFusuario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFusuario1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JTFusuario1ActionPerformed
-
     private void JTFusuario2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFusuario2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JTFusuario2ActionPerformed
 
-    private void JTFusuario3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFusuario3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JTFusuario3ActionPerformed
+    private void JBTsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTsairActionPerformed
+        this.dispose();
+         TELA_ADM_VIEW_RECEPCIONISTA telaAnterior = new TELA_ADM_VIEW_RECEPCIONISTA();
+         telaAnterior.setVisible(true);
+    }//GEN-LAST:event_JBTsairActionPerformed
+
+    private void JBTsair1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTsair1ActionPerformed
+        // Pega o CPF digitado pelo usuário
+        String cpf = JTFusuario2.getText().trim();  
+
+        // Verifica se o CPF foi preenchido
+        if (cpf.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, informe o CPF do Recepcionista.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Chama o método para buscar os dados do administrador pelo CPF
+        String jsonResponse = RecepcionistaManager.getRecepcionistaByCpf(cpf);
+
+        // Verifica se houve um erro na resposta
+        if (jsonResponse.startsWith("Erro") || jsonResponse.contains("não encontrado")) {
+            JOptionPane.showMessageDialog(this, "Recepcionista não encontrado ou erro na requisição.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        try {
+            // Converte a resposta JSON para um objeto JSONObject
+            JSONObject jsonObject = new JSONObject(jsonResponse);
+
+            // Extraímos os valores do JSON
+            String nome = jsonObject.optString("nome", "Não informado");
+            String cpfRecebido = jsonObject.optString("cpf", "Não informado");
+            
+            // Exibe os dados no JOptionPane
+            String recepcionistaInfo = "Nome: " + nome + "\n" +
+                               "CPF: " + cpfRecebido + "\n" ;
+                               
+
+            JOptionPane.showMessageDialog(this, recepcionistaInfo, "Dados do Recepcionista", JOptionPane.INFORMATION_MESSAGE);
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Erro ao processar os dados: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_JBTsair1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -334,14 +329,10 @@ public class TELA_ADM_CONSULTAR_RECEPCIONISTA extends javax.swing.JFrame {
     private javax.swing.JButton JBTsair1;
     private javax.swing.JButton JBTsair2;
     private javax.swing.JCheckBox JCHECKcpfRecepcionista;
-    private javax.swing.JCheckBox JCHECKidRecepcionista;
     private javax.swing.JCheckBox JCHECKnomeRecepcionista;
-    private javax.swing.JCheckBox JCHECKtelefoneRecepcionista;
     private javax.swing.JLabel JLBiconeClinica;
     private javax.swing.JLabel JLBnomeClinica;
     private javax.swing.JLabel JLBnomeClinica1;
-    private javax.swing.JLabel JLBsenha2;
-    private javax.swing.JLabel JLBusuario1;
     private javax.swing.JLabel JLBusuario2;
     private javax.swing.JLabel JLBusuario3;
     private javax.swing.JLabel JLBusuario4;
@@ -349,9 +340,7 @@ public class TELA_ADM_CONSULTAR_RECEPCIONISTA extends javax.swing.JFrame {
     private javax.swing.JLabel JLBversion1;
     private javax.swing.JLabel JLBversion2;
     private javax.swing.JTextField JTFusuario;
-    private javax.swing.JTextField JTFusuario1;
     private javax.swing.JTextField JTFusuario2;
-    private javax.swing.JTextField JTFusuario3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

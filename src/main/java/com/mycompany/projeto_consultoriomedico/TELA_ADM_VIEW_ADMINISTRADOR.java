@@ -84,6 +84,11 @@ public class TELA_ADM_VIEW_ADMINISTRADOR extends javax.swing.JFrame {
         JBTcadastrarRecepcionista.setText("CADASTRAR");
         JBTcadastrarRecepcionista.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         JBTcadastrarRecepcionista.setIconTextGap(1);
+        JBTcadastrarRecepcionista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBTcadastrarRecepcionistaActionPerformed(evt);
+            }
+        });
 
         JBTalterarRecepcionista.setBackground(new java.awt.Color(245, 245, 245));
         JBTalterarRecepcionista.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -118,6 +123,11 @@ public class TELA_ADM_VIEW_ADMINISTRADOR extends javax.swing.JFrame {
         JBTexcluirRecepcionista.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         JBTexcluirRecepcionista.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         JBTexcluirRecepcionista.setIconTextGap(1);
+        JBTexcluirRecepcionista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBTexcluirRecepcionistaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -288,11 +298,13 @@ public class TELA_ADM_VIEW_ADMINISTRADOR extends javax.swing.JFrame {
     }//GEN-LAST:event_JBTalterarRecepcionistaActionPerformed
 
     private void JBTvoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTvoltarActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
+         TELA_CENTRAL_ADM telaAnterior = new TELA_CENTRAL_ADM();
+         telaAnterior.setVisible(true);
     }//GEN-LAST:event_JBTvoltarActionPerformed
 
     private void JBTsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTsairActionPerformed
-        // TODO add your handling code here:
+         this.dispose();
     }//GEN-LAST:event_JBTsairActionPerformed
 
     private void JBTselectMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTselectMedicoActionPerformed
@@ -308,6 +320,18 @@ public class TELA_ADM_VIEW_ADMINISTRADOR extends javax.swing.JFrame {
         TelaConsultADM.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_JBTconsultarRecepcionistaActionPerformed
+
+    private void JBTcadastrarRecepcionistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTcadastrarRecepcionistaActionPerformed
+        TELA_ADM_CADASTRAR_ADM telaCadAdm = new TELA_ADM_CADASTRAR_ADM();
+        telaCadAdm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_JBTcadastrarRecepcionistaActionPerformed
+
+    private void JBTexcluirRecepcionistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTexcluirRecepcionistaActionPerformed
+       TELA_ADM_EXCLUIR_USUARIO telaExclui = new TELA_ADM_EXCLUIR_USUARIO();
+        telaExclui.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_JBTexcluirRecepcionistaActionPerformed
 
     /**
      * @param args the command line arguments

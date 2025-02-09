@@ -328,6 +328,9 @@
             <Property name="horizontalTextPosition" type="int" value="4"/>
             <Property name="iconTextGap" type="int" value="35"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JBTselectRecepcionistaActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="JLBtitulo">
           <Properties>

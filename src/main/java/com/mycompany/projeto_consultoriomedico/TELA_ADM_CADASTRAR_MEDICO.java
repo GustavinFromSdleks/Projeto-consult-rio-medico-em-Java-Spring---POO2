@@ -53,8 +53,6 @@ public class TELA_ADM_CADASTRAR_MEDICO extends javax.swing.JFrame {
         JLBnomeClinica.setForeground(new java.awt.Color(255, 255, 255));
         JLBnomeClinica.setText("SDLEKS MED");
 
-        JLBiconeClinica.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Documents\\NetBeansProjects\\Projeto_consultorioMedico\\src\\main\\java\\com\\mycompany\\projeto_consultoriomedico\\icons8-hospital-64.png")); // NOI18N
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -124,6 +122,11 @@ public class TELA_ADM_CADASTRAR_MEDICO extends javax.swing.JFrame {
 
         JBTsair.setText("Voltar");
         JBTsair.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        JBTsair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBTsairActionPerformed(evt);
+            }
+        });
 
         JTFsenha3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -230,6 +233,12 @@ public class TELA_ADM_CADASTRAR_MEDICO extends javax.swing.JFrame {
     private void JTFsenha3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFsenha3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JTFsenha3ActionPerformed
+
+    private void JBTsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTsairActionPerformed
+        this.dispose();
+         TELA_ADM_VIEW_MEDICO telaAnterior = new TELA_ADM_VIEW_MEDICO();
+         telaAnterior.setVisible(true);
+    }//GEN-LAST:event_JBTsairActionPerformed
 
     /**
      * @param args the command line arguments

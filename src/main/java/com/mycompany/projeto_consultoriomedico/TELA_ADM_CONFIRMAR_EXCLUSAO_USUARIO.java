@@ -33,9 +33,7 @@ public class TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO extends javax.swing.JFrame {
         JLBversion1 = new javax.swing.JLabel();
         JLBusuario2 = new javax.swing.JLabel();
         JTFusuario = new javax.swing.JTextField();
-        JLBusuario1 = new javax.swing.JLabel();
         JLBusuario3 = new javax.swing.JLabel();
-        JTFusuario1 = new javax.swing.JTextField();
         JTFusuario2 = new javax.swing.JTextField();
         JLBusuario4 = new javax.swing.JLabel();
         JLBsenha2 = new javax.swing.JLabel();
@@ -80,21 +78,10 @@ public class TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO extends javax.swing.JFrame {
             }
         });
 
-        JLBusuario1.setBackground(new java.awt.Color(88, 93, 96));
-        JLBusuario1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        JLBusuario1.setForeground(new java.awt.Color(101, 98, 98));
-        JLBusuario1.setText("ID");
-
         JLBusuario3.setBackground(new java.awt.Color(88, 93, 96));
         JLBusuario3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         JLBusuario3.setForeground(new java.awt.Color(101, 98, 98));
         JLBusuario3.setText("Estado");
-
-        JTFusuario1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTFusuario1ActionPerformed(evt);
-            }
-        });
 
         JTFusuario2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,16 +201,15 @@ public class TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(JTFusuario2, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(JTFusuario1, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(JTFusuario4, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(JLBusuario5)
                                     .addComponent(JLBusuario4)
-                                    .addComponent(JLBusuario1)
                                     .addComponent(JTFusuario3, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(JLBsenha2)
                                     .addComponent(JTFusuario6, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(JLBsenha3)
-                                    .addComponent(JTFusuario10, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(JTFusuario10, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(JLBsenha4))
                                 .addGap(112, 112, 112)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(JLBusuario6)
@@ -236,22 +222,18 @@ public class TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO extends javax.swing.JFrame {
                                     .addComponent(JLBusuario8)
                                     .addComponent(JTFusuario9, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(JLBusuario9)))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(JLBsenha4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(JLBversion3))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(319, 319, 319)
-                        .addComponent(JLBversion1))
+                            .addComponent(JLBversion3)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(137, 137, 137)
                         .addComponent(JLBusuario2))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(281, 281, 281)
-                        .addComponent(JBTsair2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(319, 319, 319)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JBTsair, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JLBversion1)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(300, 300, 300)
-                        .addComponent(JBTsair, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(289, 289, 289)
+                        .addComponent(JBTsair2, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(68, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -277,42 +259,35 @@ public class TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO extends javax.swing.JFrame {
                     .addComponent(JTFusuario5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JLBusuario1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JLBusuario8, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JLBusuario8, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JLBsenha2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(3, 3, 3)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JTFusuario1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JTFusuario8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JLBsenha2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JLBusuario9, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JTFusuario3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JTFusuario9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(JTFusuario8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JTFusuario3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JLBsenha3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JLBusuario6, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(JTFusuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(JTFusuario10, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(JLBusuario9, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JLBsenha4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JLBversion3))
-                .addGap(4, 4, 4)
-                .addComponent(JTFusuario6, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addComponent(JBTsair2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(JBTsair)
+                    .addComponent(JTFusuario9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JTFusuario10, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JLBusuario6, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JLBsenha4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JTFusuario6, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JTFusuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
+                .addComponent(JLBversion3)
+                .addGap(18, 18, 18)
+                .addComponent(JBTsair2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(JBTsair)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
                 .addComponent(JLBversion1)
                 .addContainerGap())
         );
@@ -348,10 +323,6 @@ public class TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO extends javax.swing.JFrame {
     private void JTFusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFusuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JTFusuarioActionPerformed
-
-    private void JTFusuario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFusuario1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JTFusuario1ActionPerformed
 
     private void JTFusuario2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFusuario2ActionPerformed
         // TODO add your handling code here:
@@ -430,7 +401,6 @@ public class TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO extends javax.swing.JFrame {
     private javax.swing.JLabel JLBsenha2;
     private javax.swing.JLabel JLBsenha3;
     private javax.swing.JLabel JLBsenha4;
-    private javax.swing.JLabel JLBusuario1;
     private javax.swing.JLabel JLBusuario2;
     private javax.swing.JLabel JLBusuario3;
     private javax.swing.JLabel JLBusuario4;
@@ -442,7 +412,6 @@ public class TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO extends javax.swing.JFrame {
     private javax.swing.JLabel JLBversion1;
     private javax.swing.JLabel JLBversion3;
     private javax.swing.JTextField JTFusuario;
-    private javax.swing.JTextField JTFusuario1;
     private javax.swing.JTextField JTFusuario10;
     private javax.swing.JTextField JTFusuario2;
     private javax.swing.JTextField JTFusuario3;

@@ -64,15 +64,18 @@ public class TELA_ADM_RESULTADO_CONSULTA_RECEPCIONISTA_ADM extends javax.swing.J
 
         jButton1.setBackground(new java.awt.Color(245, 245, 245));
         jButton1.setForeground(new java.awt.Color(88, 93, 96));
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Desktop\\ICONS\\icons8-retornar-24.png")); // NOI18N
         jButton1.setText("Voltar");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.setIconTextGap(1);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         JBTcadastrarRecepcionista.setBackground(new java.awt.Color(245, 245, 245));
         JBTcadastrarRecepcionista.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         JBTcadastrarRecepcionista.setForeground(new java.awt.Color(88, 93, 96));
-        JBTcadastrarRecepcionista.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Desktop\\ICONS\\icons8-cadastro-50.png")); // NOI18N
         JBTcadastrarRecepcionista.setText("CADASTRAR");
         JBTcadastrarRecepcionista.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         JBTcadastrarRecepcionista.setIconTextGap(1);
@@ -80,7 +83,6 @@ public class TELA_ADM_RESULTADO_CONSULTA_RECEPCIONISTA_ADM extends javax.swing.J
         JBTconsultarRecepcionista.setBackground(new java.awt.Color(245, 245, 245));
         JBTconsultarRecepcionista.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         JBTconsultarRecepcionista.setForeground(new java.awt.Color(60, 63, 65));
-        JBTconsultarRecepcionista.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Desktop\\ICONS\\icons8-pesquisar-documento-50.png")); // NOI18N
         JBTconsultarRecepcionista.setText("NOVA CONSULTA");
         JBTconsultarRecepcionista.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         JBTconsultarRecepcionista.setIconTextGap(1);
@@ -88,7 +90,6 @@ public class TELA_ADM_RESULTADO_CONSULTA_RECEPCIONISTA_ADM extends javax.swing.J
         JBTalterarRecepcionista.setBackground(new java.awt.Color(245, 245, 245));
         JBTalterarRecepcionista.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         JBTalterarRecepcionista.setForeground(new java.awt.Color(60, 63, 65));
-        JBTalterarRecepcionista.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Desktop\\ICONS\\icons8-editar-usuário-masculino-48.png")); // NOI18N
         JBTalterarRecepcionista.setText("ALTERAR");
         JBTalterarRecepcionista.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         JBTalterarRecepcionista.setIconTextGap(1);
@@ -101,7 +102,6 @@ public class TELA_ADM_RESULTADO_CONSULTA_RECEPCIONISTA_ADM extends javax.swing.J
         JBTexcluirRecepcionista.setBackground(new java.awt.Color(245, 245, 245));
         JBTexcluirRecepcionista.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         JBTexcluirRecepcionista.setForeground(new java.awt.Color(60, 63, 65));
-        JBTexcluirRecepcionista.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Desktop\\ICONS\\icons8-excluir-propriedade-50.png")); // NOI18N
         JBTexcluirRecepcionista.setText("EXCLUIR");
         JBTexcluirRecepcionista.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         JBTexcluirRecepcionista.setHideActionText(true);
@@ -123,7 +123,7 @@ public class TELA_ADM_RESULTADO_CONSULTA_RECEPCIONISTA_ADM extends javax.swing.J
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(JBTcadastrarRecepcionista)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(JBTconsultarRecepcionista)
                 .addGap(30, 30, 30)
                 .addComponent(JBTalterarRecepcionista)
@@ -195,6 +195,12 @@ public class TELA_ADM_RESULTADO_CONSULTA_RECEPCIONISTA_ADM extends javax.swing.J
     private void JBTalterarRecepcionistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTalterarRecepcionistaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JBTalterarRecepcionistaActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.dispose();
+         TELA_ADM_CONSULTAR_RECEPCIONISTA telaAnterior = new TELA_ADM_CONSULTAR_RECEPCIONISTA();
+         telaAnterior.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

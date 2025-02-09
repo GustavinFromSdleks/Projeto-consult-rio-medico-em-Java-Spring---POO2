@@ -58,7 +58,6 @@ public class TELA_CENTRAL_ADM extends javax.swing.JFrame {
         JLBhome.setBackground(new java.awt.Color(245, 245, 245));
         JLBhome.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         JLBhome.setForeground(new java.awt.Color(88, 93, 96));
-        JLBhome.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Desktop\\ICONS\\icons8-casa-50.png")); // NOI18N
         JLBhome.setText("HOME");
         JLBhome.setIconTextGap(1);
 
@@ -85,8 +84,6 @@ public class TELA_CENTRAL_ADM extends javax.swing.JFrame {
         JLBnomeClinica.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         JLBnomeClinica.setForeground(new java.awt.Color(255, 255, 255));
         JLBnomeClinica.setText("SDLEKS MED");
-
-        JLBiconeClinica.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Documents\\NetBeansProjects\\Projeto_consultorioMedico\\src\\main\\java\\com\\mycompany\\projeto_consultoriomedico\\icons8-hospital-64.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -138,7 +135,6 @@ public class TELA_CENTRAL_ADM extends javax.swing.JFrame {
         JBTselectMedico.setBackground(new java.awt.Color(245, 245, 245));
         JBTselectMedico.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         JBTselectMedico.setForeground(new java.awt.Color(94, 94, 94));
-        JBTselectMedico.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Desktop\\ICONS\\icons8-medical-doctor-26.png")); // NOI18N
         JBTselectMedico.setText("MEDICO");
         JBTselectMedico.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         JBTselectMedico.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -153,17 +149,20 @@ public class TELA_CENTRAL_ADM extends javax.swing.JFrame {
         JBTselectRecepcionista.setBackground(new java.awt.Color(245, 245, 245));
         JBTselectRecepcionista.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         JBTselectRecepcionista.setForeground(new java.awt.Color(94, 94, 94));
-        JBTselectRecepcionista.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Desktop\\ICONS\\icons8-recepcionista-24 - correto.png")); // NOI18N
         JBTselectRecepcionista.setText("RECEPCIONISTA");
         JBTselectRecepcionista.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         JBTselectRecepcionista.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         JBTselectRecepcionista.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         JBTselectRecepcionista.setIconTextGap(35);
+        JBTselectRecepcionista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBTselectRecepcionistaActionPerformed(evt);
+            }
+        });
 
         JLBtitulo.setBackground(new java.awt.Color(88, 93, 96));
         JLBtitulo.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         JLBtitulo.setForeground(new java.awt.Color(88, 93, 96));
-        JLBtitulo.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Desktop\\ICONS\\icons8-administrador-64.png")); // NOI18N
         JLBtitulo.setText("DASHBOARD ADMINISTRADOR");
         JLBtitulo.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         JLBtitulo.setIconTextGap(1);
@@ -171,7 +170,6 @@ public class TELA_CENTRAL_ADM extends javax.swing.JFrame {
         JBTselectMedico1.setBackground(new java.awt.Color(245, 245, 245));
         JBTselectMedico1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         JBTselectMedico1.setForeground(new java.awt.Color(94, 94, 94));
-        JBTselectMedico1.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Desktop\\ICONS\\icons8-administrador-24.png")); // NOI18N
         JBTselectMedico1.setText("ADMINISTRADOR");
         JBTselectMedico1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         JBTselectMedico1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -263,7 +261,9 @@ public class TELA_CENTRAL_ADM extends javax.swing.JFrame {
     }//GEN-LAST:event_JBTsairActionPerformed
 
     private void JBTselectMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTselectMedicoActionPerformed
-        // TODO add your handling code here:
+        TELA_ADM_VIEW_MEDICO telaAdmViewMed = new TELA_ADM_VIEW_MEDICO();
+        telaAdmViewMed.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_JBTselectMedicoActionPerformed
 
     private void JBTselectMedico1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTselectMedico1ActionPerformed
@@ -271,6 +271,12 @@ public class TELA_CENTRAL_ADM extends javax.swing.JFrame {
         TelaViewADM.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_JBTselectMedico1ActionPerformed
+
+    private void JBTselectRecepcionistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTselectRecepcionistaActionPerformed
+        TELA_ADM_VIEW_RECEPCIONISTA telaAdmViewRec = new TELA_ADM_VIEW_RECEPCIONISTA();
+        telaAdmViewRec .setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_JBTselectRecepcionistaActionPerformed
 
     /**
      * @param args the command line arguments

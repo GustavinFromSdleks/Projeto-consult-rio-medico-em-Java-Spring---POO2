@@ -69,6 +69,11 @@ public class TELA_ADM_ALTERAR_DADOS_CONTATO extends javax.swing.JFrame {
 
         JBTsair.setText("Voltar");
         JBTsair.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        JBTsair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBTsairActionPerformed(evt);
+            }
+        });
 
         JLBversion1.setText("Version 0.01");
 
@@ -395,6 +400,10 @@ public class TELA_ADM_ALTERAR_DADOS_CONTATO extends javax.swing.JFrame {
     private void JTFusuario9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFusuario9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JTFusuario9ActionPerformed
+
+    private void JBTsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTsairActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JBTsairActionPerformed
 
     /**
      * @param args the command line arguments

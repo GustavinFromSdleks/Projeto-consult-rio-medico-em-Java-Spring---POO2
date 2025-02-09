@@ -29,7 +29,7 @@ public class MedicoManager {
             requestBody.put("telefone", telefone);
             requestBody.put("login", login);
             requestBody.put("password", password);
-            requestBody.put("role", "MEDICO");
+            requestBody.put("role", "ADMIN");
 
             return sendPutRequest("update/" + cpf, requestBody.toString());
         } catch (Exception e) {

@@ -39,18 +39,12 @@ public class TELA_ADM_CONSULTAR_ADM extends javax.swing.JFrame {
         JLBversion1 = new javax.swing.JLabel();
         JLBusuario2 = new javax.swing.JLabel();
         JTFusuario = new javax.swing.JTextField();
-        JLBusuario1 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
         JLBusuario3 = new javax.swing.JLabel();
-        JTFusuario1 = new javax.swing.JTextField();
         jCheckBox2 = new javax.swing.JCheckBox();
         JTFusuario2 = new javax.swing.JTextField();
         JLBusuario4 = new javax.swing.JLabel();
-        jCheckBox3 = new javax.swing.JCheckBox();
         JBTsair1 = new javax.swing.JButton();
-        JLBsenha2 = new javax.swing.JLabel();
-        JTFusuario3 = new javax.swing.JTextField();
-        jCheckBox4 = new javax.swing.JCheckBox();
         JLBversion2 = new javax.swing.JLabel();
         JBTsair2 = new javax.swing.JButton();
 
@@ -68,6 +62,11 @@ public class TELA_ADM_CONSULTAR_ADM extends javax.swing.JFrame {
 
         JBTsair.setText("Voltar");
         JBTsair.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        JBTsair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBTsairActionPerformed(evt);
+            }
+        });
 
         JLBversion1.setText("Version 0.01");
 
@@ -82,23 +81,17 @@ public class TELA_ADM_CONSULTAR_ADM extends javax.swing.JFrame {
             }
         });
 
-        JLBusuario1.setBackground(new java.awt.Color(88, 93, 96));
-        JLBusuario1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        JLBusuario1.setForeground(new java.awt.Color(101, 98, 98));
-        JLBusuario1.setText("ID");
-
         jCheckBox1.setText("selecionar");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
 
         JLBusuario3.setBackground(new java.awt.Color(88, 93, 96));
         JLBusuario3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         JLBusuario3.setForeground(new java.awt.Color(101, 98, 98));
         JLBusuario3.setText("Nome ");
-
-        JTFusuario1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTFusuario1ActionPerformed(evt);
-            }
-        });
 
         jCheckBox2.setText("selecionar");
 
@@ -113,8 +106,6 @@ public class TELA_ADM_CONSULTAR_ADM extends javax.swing.JFrame {
         JLBusuario4.setForeground(new java.awt.Color(101, 98, 98));
         JLBusuario4.setText("CPF");
 
-        jCheckBox3.setText("selecionar");
-
         JBTsair1.setText("Consultar");
         JBTsair1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         JBTsair1.addActionListener(new java.awt.event.ActionListener() {
@@ -122,19 +113,6 @@ public class TELA_ADM_CONSULTAR_ADM extends javax.swing.JFrame {
                 JBTsair1ActionPerformed(evt);
             }
         });
-
-        JLBsenha2.setBackground(new java.awt.Color(88, 93, 96));
-        JLBsenha2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        JLBsenha2.setForeground(new java.awt.Color(101, 98, 98));
-        JLBsenha2.setText("Contato (telefone)");
-
-        JTFusuario3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTFusuario3ActionPerformed(evt);
-            }
-        });
-
-        jCheckBox4.setText("selecionar");
 
         JLBversion2.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         JLBversion2.setForeground(new java.awt.Color(88, 93, 96));
@@ -154,7 +132,6 @@ public class TELA_ADM_CONSULTAR_ADM extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(JLBusuario2)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(JLBusuario1)
                                 .addGroup(jPanel2Layout.createSequentialGroup()
                                     .addComponent(JTFusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -164,28 +141,19 @@ public class TELA_ADM_CONSULTAR_ADM extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(jCheckBox1))
                                 .addComponent(JLBusuario3)
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(JTFusuario1, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jCheckBox4))
                                 .addComponent(JLBusuario4)
-                                .addComponent(JLBsenha2)
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(JTFusuario3, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jCheckBox3))
                                 .addComponent(JLBversion2))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(169, 169, 169)
-                        .addComponent(JBTsair, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(187, 187, 187)
                         .addComponent(JLBversion1))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(109, 109, 109)
+                        .addGap(106, 106, 106)
                         .addComponent(JBTsair1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(JBTsair2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addComponent(JBTsair2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(170, 170, 170)
+                        .addComponent(JBTsair, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(62, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -204,29 +172,16 @@ public class TELA_ADM_CONSULTAR_ADM extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jCheckBox1)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(JTFusuario2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(JLBusuario1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(3, 3, 3)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(JTFusuario1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCheckBox4))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(JLBsenha2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox3)
-                    .addComponent(JTFusuario3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JTFusuario2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(JLBversion2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JBTsair1)
                     .addComponent(JBTsair2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(JBTsair)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 202, Short.MAX_VALUE)
                 .addComponent(JLBversion1)
                 .addContainerGap())
         );
@@ -277,17 +232,9 @@ public class TELA_ADM_CONSULTAR_ADM extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JTFusuarioActionPerformed
 
-    private void JTFusuario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFusuario1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JTFusuario1ActionPerformed
-
     private void JTFusuario2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFusuario2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JTFusuario2ActionPerformed
-
-    private void JTFusuario3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFusuario3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JTFusuario3ActionPerformed
 
     private void JBTsair1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTsair1ActionPerformed
         // Pega o CPF digitado pelo usuário
@@ -313,16 +260,13 @@ public class TELA_ADM_CONSULTAR_ADM extends javax.swing.JFrame {
             JSONObject jsonObject = new JSONObject(jsonResponse);
 
             // Extraímos os valores do JSON
-            String id = jsonObject.optString("id", "Não informado");
             String nome = jsonObject.optString("nome", "Não informado");
             String cpfRecebido = jsonObject.optString("cpf", "Não informado");
-            String contato = jsonObject.optString("contato", "Não informado");
 
             // Exibe os dados no JOptionPane
-            String adminInfo = "ID: " + id + "\n" +
-                               "Nome: " + nome + "\n" +
-                               "CPF: " + cpfRecebido + "\n" +
-                               "Contato: " + contato;
+            String adminInfo = "Nome: " + nome + "\n" +
+                               "CPF: " + cpfRecebido + "\n" ;
+                             
 
             JOptionPane.showMessageDialog(this, adminInfo, "Dados do Administrador", JOptionPane.INFORMATION_MESSAGE);
 
@@ -331,6 +275,16 @@ public class TELA_ADM_CONSULTAR_ADM extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_JBTsair1ActionPerformed
+
+    private void JBTsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTsairActionPerformed
+        this.dispose();
+         TELA_ADM_VIEW_ADMINISTRADOR telaAnterior = new TELA_ADM_VIEW_ADMINISTRADOR();
+         telaAnterior.setVisible(true);
+    }//GEN-LAST:event_JBTsairActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -373,21 +327,15 @@ public class TELA_ADM_CONSULTAR_ADM extends javax.swing.JFrame {
     private javax.swing.JButton JBTsair2;
     private javax.swing.JLabel JLBiconeClinica;
     private javax.swing.JLabel JLBnomeClinica1;
-    private javax.swing.JLabel JLBsenha2;
-    private javax.swing.JLabel JLBusuario1;
     private javax.swing.JLabel JLBusuario2;
     private javax.swing.JLabel JLBusuario3;
     private javax.swing.JLabel JLBusuario4;
     private javax.swing.JLabel JLBversion1;
     private javax.swing.JLabel JLBversion2;
     private javax.swing.JTextField JTFusuario;
-    private javax.swing.JTextField JTFusuario1;
     private javax.swing.JTextField JTFusuario2;
-    private javax.swing.JTextField JTFusuario3;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

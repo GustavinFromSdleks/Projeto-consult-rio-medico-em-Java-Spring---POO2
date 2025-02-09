@@ -51,10 +51,14 @@ public class TELA_ADM_EXCLUIR_USUARIO extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(245, 245, 245));
         jButton1.setForeground(new java.awt.Color(88, 93, 96));
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Desktop\\ICONS\\icons8-retornar-24.png")); // NOI18N
         jButton1.setText("Voltar");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.setIconTextGap(1);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         JLBusuario2.setBackground(new java.awt.Color(88, 93, 96));
         JLBusuario2.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
@@ -172,6 +176,12 @@ public class TELA_ADM_EXCLUIR_USUARIO extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.dispose();
+         TELA_CENTRAL_ADM telaAnterior = new TELA_CENTRAL_ADM();
+         telaAnterior.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

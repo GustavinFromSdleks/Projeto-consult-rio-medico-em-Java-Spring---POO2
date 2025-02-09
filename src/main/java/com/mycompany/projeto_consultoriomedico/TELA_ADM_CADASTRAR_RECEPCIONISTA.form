@@ -86,11 +86,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="JLBiconeClinica">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\User\Documents\NetBeansProjects\Projeto_consultorioMedico\src\main\java\com\mycompany\projeto_consultoriomedico\icons8-hospital-64.png"/>
-            </Property>
-          </Properties>
         </Component>
       </SubComponents>
     </Container>
@@ -241,6 +236,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JBTsairActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
