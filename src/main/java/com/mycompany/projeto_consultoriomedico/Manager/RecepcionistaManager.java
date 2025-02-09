@@ -26,7 +26,7 @@ public class RecepcionistaManager {
             requestBody.put("telefone", telefone);
             requestBody.put("login", login);
             requestBody.put("password", password);
-            requestBody.put("role", "ADMIN");
+            requestBody.put("role", "RECEPCIONISTA");
 
             return sendPutRequest("update/" + cpf, requestBody.toString());
         } catch (Exception e) {
