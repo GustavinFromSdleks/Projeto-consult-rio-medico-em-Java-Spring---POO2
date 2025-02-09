@@ -9,7 +9,7 @@ import org.json.JSONObject;
 
 public class ConsultaManager {
 
-    private static final String BASE_URL = "http://localhost:14498/consulta/";
+    private static final String BASE_URL = "https://lucas4897.c44.integrator.host/consulta/";
 
     // Criar uma nova consulta
     public static String createConsulta(String data, boolean status, boolean pagamento, int medicoId, int pacienteId) {

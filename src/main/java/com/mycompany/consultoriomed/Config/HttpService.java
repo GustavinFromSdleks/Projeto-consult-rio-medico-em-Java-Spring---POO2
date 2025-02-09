@@ -9,7 +9,7 @@ import java.net.URL;
 
 public class HttpService {
 
-    private static final String BASE_URL = "http://localhost:14498";
+    private static final String BASE_URL = "https://lucas4897.c44.integrator.host/";
 
     // Método para fazer requisições POST
     public static String sendPostRequest(String endpoint, String jsonBody, boolean requiresAuth) {

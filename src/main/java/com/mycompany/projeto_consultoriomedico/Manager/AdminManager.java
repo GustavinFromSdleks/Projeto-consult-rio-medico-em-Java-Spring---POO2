@@ -9,7 +9,7 @@ import org.json.JSONObject;
 
 public class AdminManager {
 
-    private static final String BASE_URL = "http://localhost:14498/admin/";
+    private static final String BASE_URL = "https://lucas4897.c44.integrator.host/admin/";
 
     // Método para buscar um administrador pelo CPF
     public static String getAdminByCpf(String cpf) {

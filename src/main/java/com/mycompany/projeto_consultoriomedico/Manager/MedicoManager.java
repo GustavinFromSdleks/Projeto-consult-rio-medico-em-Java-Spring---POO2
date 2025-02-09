@@ -9,7 +9,7 @@ import org.json.JSONObject;
 
 public class MedicoManager {
 
-    private static final String BASE_URL = "http://localhost:14498/medico/";
+    private static final String BASE_URL = "https://lucas4897.c44.integrator.host/medico/";
 
     // Atualiza um médico pelo CPF
     public static String updateMedico(String cpf, String nome, String crm, String especialidade, String estado, 

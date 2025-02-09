@@ -9,7 +9,7 @@ import org.json.JSONObject;
 
 public class DisponibilidadeManager {
 
-    private static final String BASE_URL = "http://localhost:14498/disponibilidades/";
+    private static final String BASE_URL = "https://lucas4897.c44.integrator.host/disponibilidades/";
 
     // Criar uma nova disponibilidade
     public static String createDisponibilidade(String data, boolean disponivel, int medicoId) {
