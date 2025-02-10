@@ -17,7 +17,7 @@ public class HttpService {
             URL url = new URL(BASE_URL + endpoint);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("POST");
-            connection.setRequestProperty("Content-Type", "application/json");
+            connection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
 
             // Adiciona o token se necessário
             if (requiresAuth) {
@@ -31,7 +31,8 @@ public class HttpService {
             // Envia o JSON no corpo da requisição
             connection.setDoOutput(true);
             try (DataOutputStream wr = new DataOutputStream(connection.getOutputStream())) {
-                wr.writeBytes(jsonBody);
+                byte[] jsonBytes = jsonBody.getBytes("UTF-8");
+                wr.write(jsonBytes);
                 wr.flush();
             }
 

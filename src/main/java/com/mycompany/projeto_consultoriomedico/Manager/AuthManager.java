@@ -50,8 +50,6 @@ public class AuthManager {
         return "Administrador cadastrado com sucesso!";
     }
 
-
-
     // Método para registrar um médico
     public static String registerMedico(String nome, String cpf, String crm, String especialidade,
                                         String estado, String cidade, String bairro, String rua,
@@ -77,8 +75,8 @@ public class AuthManager {
 
     // Método para registrar uma recepcionista
     public static String registerRecepcionista(String nome, String cpf, String estado, String cidade, 
-                                               String bairro, String rua, int numero, String telefone,
-                                               String login, String password) {
+                                           String bairro, String rua, int numero, String telefone,
+                                           String login, String password) {
         String endpoint = "/auth/recepcionista/register";
         JSONObject json = new JSONObject();
         json.put("nome", nome);
@@ -93,41 +91,50 @@ public class AuthManager {
         json.put("password", password);
         json.put("role", "RECEPCIONISTA");
 
-        return HttpService.sendPostRequest(endpoint, json.toString(), true);
+        // Envia a requisição para a API
+        String response = HttpService.sendPostRequest(endpoint, json.toString(), true);
+
+        // Se a resposta for null ou vazia, o cadastro foi bem-sucedido
+        if (response == null || response.trim().isEmpty()) {
+            return "Recepcionista cadastrado com sucesso!";
+        }
+
+        // Aqui, a resposta será tratada como texto simples e devolvemos a frase diretamente
+        return "Erro ao cadastrar recepcionista: " + response;
     }
 
-    // Método para fazer login e armazenar o token
-    public static String login(String login, String password) {
-        String endpoint = "/auth/login";
-        JSONObject json = new JSONObject();
-        json.put("login", login);
-        json.put("password", password);
+        // Método para fazer login e armazenar o token
+        public static String login(String login, String password) {
+            String endpoint = "/auth/login";
+            JSONObject json = new JSONObject();
+            json.put("login", login);
+            json.put("password", password);
 
-        String response = HttpService.sendPostRequest(endpoint, json.toString(), false);
+            String response = HttpService.sendPostRequest(endpoint, json.toString(), false);
 
-        try {
-            System.out.println("Resposta da API: " + response);  // Imprimir resposta da API para debugar
+            try {
+                System.out.println("Resposta da API: " + response);  // Imprimir resposta da API para debugar
 
-            JSONObject jsonResponse = new JSONObject(response);
+                JSONObject jsonResponse = new JSONObject(response);
 
-            // Verifica se a resposta contém o campo "token" e se o token não é uma mensagem de erro
-            if (jsonResponse.has("token")) {
-                String token = jsonResponse.getString("token");
+                // Verifica se a resposta contém o campo "token" e se o token não é uma mensagem de erro
+                if (jsonResponse.has("token")) {
+                    String token = jsonResponse.getString("token");
 
-                // Verifica se o token é uma mensagem de erro
-                if (token.equals("Falha na autenticação!")) {
-                    return "Falha na autenticação! Usuário ou senha incorretos.";
+                    // Verifica se o token é uma mensagem de erro
+                    if (token.equals("Falha na autenticação!")) {
+                        return "Falha na autenticação! Usuário ou senha incorretos.";
+                    }
+
+                    // Se o token for válido, armazene o token
+                    TokenManager.setToken(token);
+                    return "Login bem-sucedido! Token armazenado.";
+                } else {
+                    // Se não contiver o token, retorna mensagem de erro
+                    return "Erro no login: Token não encontrado na resposta.";
                 }
-
-                // Se o token for válido, armazene o token
-                TokenManager.setToken(token);
-                return "Login bem-sucedido! Token armazenado.";
-            } else {
-                // Se não contiver o token, retorna mensagem de erro
-                return "Erro no login: Token não encontrado na resposta.";
+            } catch (Exception e) {
+                return "Erro ao processar resposta do login: " + e.getMessage();
             }
-        } catch (Exception e) {
-            return "Erro ao processar resposta do login: " + e.getMessage();
         }
     }
-}
