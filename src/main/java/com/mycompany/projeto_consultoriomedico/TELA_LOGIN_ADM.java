@@ -21,6 +21,7 @@ public class TELA_LOGIN_ADM extends javax.swing.JFrame {
     public TELA_LOGIN_ADM() {
         initComponents();
         setLocationRelativeTo(null);
+        TelaUtil.padronizarTela(this);
     }
 
     /**

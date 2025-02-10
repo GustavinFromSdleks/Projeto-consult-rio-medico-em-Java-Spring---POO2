@@ -4,6 +4,9 @@
  */
 package com.mycompany.projeto_consultoriomedico;
 
+import com.mycompany.projeto_consultoriomedico.Manager.AdminManager;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author User
@@ -16,6 +19,7 @@ public class TELA_ADM_EXCLUIR_USUARIO extends javax.swing.JFrame {
     public TELA_ADM_EXCLUIR_USUARIO() {
         initComponents();
         setLocationRelativeTo(null);
+        TelaUtil.padronizarTela(this);
     }
 
     /**
@@ -32,12 +36,9 @@ public class TELA_ADM_EXCLUIR_USUARIO extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         JLBusuario2 = new javax.swing.JLabel();
-        JLBusuario1 = new javax.swing.JLabel();
         JLBusuario4 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
         JBTsair2 = new javax.swing.JButton();
-        JCHECKexcluirID = new javax.swing.JCheckBox();
         JCHECKexcluirCPF = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -65,11 +66,6 @@ public class TELA_ADM_EXCLUIR_USUARIO extends javax.swing.JFrame {
         JLBusuario2.setForeground(new java.awt.Color(101, 98, 98));
         JLBusuario2.setText("Insira os dados do usuario para excluir");
 
-        JLBusuario1.setBackground(new java.awt.Color(88, 93, 96));
-        JLBusuario1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        JLBusuario1.setForeground(new java.awt.Color(101, 98, 98));
-        JLBusuario1.setText("ID");
-
         JLBusuario4.setBackground(new java.awt.Color(88, 93, 96));
         JLBusuario4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         JLBusuario4.setForeground(new java.awt.Color(101, 98, 98));
@@ -77,13 +73,14 @@ public class TELA_ADM_EXCLUIR_USUARIO extends javax.swing.JFrame {
 
         jTextField1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTextField2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
         JBTsair2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        JBTsair2.setText("Verificar  validade");
+        JBTsair2.setText("Excluir");
         JBTsair2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        JCHECKexcluirID.setText("selecionar");
+        JBTsair2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBTsair2ActionPerformed(evt);
+            }
+        });
 
         JCHECKexcluirCPF.setText("selecionar");
 
@@ -99,16 +96,11 @@ public class TELA_ADM_EXCLUIR_USUARIO extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(40, 40, 40)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JLBusuario4)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(JCHECKexcluirCPF))
-                            .addComponent(JLBusuario1)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(JCHECKexcluirID))
-                            .addComponent(JLBusuario4)))
+                                .addComponent(JCHECKexcluirCPF))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(193, 193, 193)
                         .addComponent(JBTsair2, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -123,19 +115,13 @@ public class TELA_ADM_EXCLUIR_USUARIO extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
                 .addComponent(JLBusuario2)
-                .addGap(35, 35, 35)
-                .addComponent(JLBusuario1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1, 1, 1)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JCHECKexcluirID))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(32, 32, 32)
                 .addComponent(JLBusuario4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JCHECKexcluirCPF))
-                .addGap(41, 41, 41)
+                .addGap(99, 99, 99)
                 .addComponent(JBTsair2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(58, Short.MAX_VALUE))
         );
@@ -183,6 +169,37 @@ public class TELA_ADM_EXCLUIR_USUARIO extends javax.swing.JFrame {
          telaAnterior.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void JBTsair2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTsair2ActionPerformed
+        // Captura o CPF digitado pelo usuário
+        String cpf = jTextField1.getText().trim();
+
+        // Verifica se o CPF foi preenchido
+        if (cpf.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, informe o CPF do administrador a ser excluído.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Confirmação antes da exclusão
+        int confirmacao = JOptionPane.showConfirmDialog(this, 
+            "Tem certeza que deseja excluir o administrador com CPF: " + cpf + "?", 
+            "Confirmar Exclusão", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+
+        if (confirmacao != JOptionPane.YES_OPTION) {
+            return; // Se o usuário não confirmar, encerra o método
+        }
+
+        // Chama o método para excluir o administrador
+        String response = AdminManager.deleteAdmin(cpf);
+
+        // Verifica a resposta da API
+        if (response.startsWith("Erro") || response.contains("não encontrado")) {
+            JOptionPane.showMessageDialog(this, "Erro ao excluir administrador: " + response, "Erro", JOptionPane.ERROR_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(this, "Administrador excluído com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+            jTextField1.setText(""); // Limpa o campo de CPF após a exclusão
+        }
+    }//GEN-LAST:event_JBTsair2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -221,8 +238,6 @@ public class TELA_ADM_EXCLUIR_USUARIO extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JBTsair2;
     private javax.swing.JCheckBox JCHECKexcluirCPF;
-    private javax.swing.JCheckBox JCHECKexcluirID;
-    private javax.swing.JLabel JLBusuario1;
     private javax.swing.JLabel JLBusuario2;
     private javax.swing.JLabel JLBusuario4;
     private javax.swing.JLabel JLBversion1;
@@ -230,6 +245,5 @@ public class TELA_ADM_EXCLUIR_USUARIO extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }

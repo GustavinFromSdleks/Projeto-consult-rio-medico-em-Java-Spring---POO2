@@ -88,22 +88,30 @@ public class AdminManager {
     }
 
     private static String sendDeleteRequest(String endpoint) {
-        try {
-            String authToken = TokenManager.getToken();
-            if (authToken == null || authToken.isEmpty()) {
-                return "Token de autenticação inválido ou não encontrado!";
-            }
-
-            URL url = new URL(BASE_URL + endpoint);
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setRequestMethod("DELETE");
-            connection.setRequestProperty("Authorization", "Bearer " + authToken);
-
-            return getResponse(connection);
-        } catch (Exception e) {
-            return "Erro na requisição: " + e.getMessage();
+    try {
+        String authToken = TokenManager.getToken();
+        if (authToken == null || authToken.isEmpty()) {
+            return "Token de autenticação inválido ou não encontrado!";
         }
+
+        URL url = new URL(BASE_URL + endpoint);
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        connection.setRequestMethod("DELETE");
+        connection.setRequestProperty("Authorization", "Bearer " + authToken);
+
+        int responseCode = connection.getResponseCode();
+
+        // Verifica se o código é 204 (sem conteúdo) e trata como sucesso
+        if (responseCode == 204) {
+            return "Administrador excluído com sucesso!";
+        }
+
+        return getResponse(connection);
+    } catch (Exception e) {
+        return "Erro na requisição: " + e.getMessage();
     }
+}
+
 
     // Método para obter a resposta da requisição HTTP
     private static String getResponse(HttpURLConnection connection) {

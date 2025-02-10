@@ -19,6 +19,7 @@ public class TELA_ADM_CADASTRAR_RECEPCIONISTA extends javax.swing.JFrame {
     public TELA_ADM_CADASTRAR_RECEPCIONISTA() {
         initComponents();
         setLocationRelativeTo(null);
+        TelaUtil.padronizarTela(this);
     }
 
     /**

@@ -16,6 +16,7 @@ public class TELA_ADM_FINALIZAR_CADASTRO extends javax.swing.JFrame {
     public TELA_ADM_FINALIZAR_CADASTRO() {
         initComponents();
         setLocationRelativeTo(null);
+        TelaUtil.padronizarTela(this);
     }
 
     /**

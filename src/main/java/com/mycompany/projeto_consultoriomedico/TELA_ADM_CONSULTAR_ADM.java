@@ -6,6 +6,7 @@ package com.mycompany.projeto_consultoriomedico;
 
 import com.mycompany.projeto_consultoriomedico.Manager.AdminManager;
 import javax.swing.JOptionPane;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 /**
@@ -120,6 +121,11 @@ public class TELA_ADM_CONSULTAR_ADM extends javax.swing.JFrame {
 
         JBTsair2.setText("Listar todos");
         JBTsair2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        JBTsair2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBTsair2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -285,6 +291,49 @@ public class TELA_ADM_CONSULTAR_ADM extends javax.swing.JFrame {
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void JBTsair2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTsair2ActionPerformed
+        // Chama o método para buscar todos os administradores
+        String jsonResponse = AdminManager.getAllAdmins();
+
+        // Verifica se houve um erro na resposta
+        if (jsonResponse.startsWith("Erro") || jsonResponse.contains("não encontrado")) {
+            JOptionPane.showMessageDialog(this, "Erro ao buscar administradores.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        try {
+            // Converte a resposta JSON para um objeto JSONArray, pois é uma lista de administradores
+            JSONArray jsonArray = new JSONArray(jsonResponse);
+
+            // Verifica se a lista está vazia
+            if (jsonArray.length() == 0) {
+                JOptionPane.showMessageDialog(this, "Nenhum administrador encontrado.", "Erro", JOptionPane.INFORMATION_MESSAGE);
+                return;
+            }
+
+            // Construção da string para exibir as informações
+            StringBuilder adminInfo = new StringBuilder("Lista de Administradores:\n\n");
+
+            // Percorre todos os administradores e extrai as informações
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject admin = jsonArray.getJSONObject(i);
+                String nome = admin.optString("nome", "Não informado");
+                String cpf = admin.optString("cpf", "Não informado");
+
+                // Adiciona as informações do administrador ao StringBuilder
+                adminInfo.append("Nome: ").append(nome).append("\n");
+                adminInfo.append("CPF: ").append(cpf).append("\n");
+                adminInfo.append("-------------------------------\n");
+            }
+
+            // Exibe as informações no JOptionPane
+            JOptionPane.showMessageDialog(this, adminInfo.toString(), "Administradores Cadastrados", JOptionPane.INFORMATION_MESSAGE);
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Erro ao processar os dados: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_JBTsair2ActionPerformed
 
     /**
      * @param args the command line arguments

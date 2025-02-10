@@ -16,6 +16,7 @@ public class TELA_ADM_ALTERAR_USUARIOS extends javax.swing.JFrame {
     public TELA_ADM_ALTERAR_USUARIOS() {
         initComponents();
         setLocationRelativeTo(null);
+        TelaUtil.padronizarTela(this);
     }
 
     /**

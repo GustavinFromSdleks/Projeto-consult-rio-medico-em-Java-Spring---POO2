@@ -20,7 +20,7 @@ public class TELA_ADM_CONSULTAR_MEDICO extends javax.swing.JFrame {
     public TELA_ADM_CONSULTAR_MEDICO() {
         initComponents();
         setLocationRelativeTo(null);
-
+        TelaUtil.padronizarTela(this);
     }
 
     /**

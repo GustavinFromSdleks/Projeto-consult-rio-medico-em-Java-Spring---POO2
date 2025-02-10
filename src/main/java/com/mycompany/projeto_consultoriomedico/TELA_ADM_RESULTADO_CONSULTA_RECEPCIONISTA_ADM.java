@@ -16,6 +16,7 @@ public class TELA_ADM_RESULTADO_CONSULTA_RECEPCIONISTA_ADM extends javax.swing.J
     public TELA_ADM_RESULTADO_CONSULTA_RECEPCIONISTA_ADM() {
         initComponents();
         setLocationRelativeTo(null);
+        TelaUtil.padronizarTela(this);
     }
 
     /**

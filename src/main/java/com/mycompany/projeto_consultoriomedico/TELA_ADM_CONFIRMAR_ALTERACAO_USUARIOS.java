@@ -16,6 +16,7 @@ public class TELA_ADM_CONFIRMAR_ALTERACAO_USUARIOS extends javax.swing.JFrame {
     public TELA_ADM_CONFIRMAR_ALTERACAO_USUARIOS() {
         initComponents();
         setLocationRelativeTo(null);
+        TelaUtil.padronizarTela(this);
     }
 
     /**

@@ -16,6 +16,7 @@ public class TELA_ADM_VIEW_ADMINISTRADOR extends javax.swing.JFrame {
     public TELA_ADM_VIEW_ADMINISTRADOR() {
         initComponents();
         setLocationRelativeTo(null);
+        TelaUtil.padronizarTela(this);
     }
 
     /**

@@ -16,6 +16,7 @@ public class TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO extends javax.swing.JFrame {
     public TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO() {
         initComponents();
         setLocationRelativeTo(null);
+        TelaUtil.padronizarTela(this);
     }
 
     /**

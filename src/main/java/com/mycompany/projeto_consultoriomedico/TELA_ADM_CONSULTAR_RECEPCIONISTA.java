@@ -20,6 +20,7 @@ public class TELA_ADM_CONSULTAR_RECEPCIONISTA extends javax.swing.JFrame {
     public TELA_ADM_CONSULTAR_RECEPCIONISTA() {
         initComponents();
         setLocationRelativeTo(null);
+        TelaUtil.padronizarTela(this);
     }
 
     /**

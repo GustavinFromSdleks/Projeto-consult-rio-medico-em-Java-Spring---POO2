@@ -16,6 +16,7 @@ public class TELA_ADM_CADASTRAR_INFO_CONTATO extends javax.swing.JFrame {
     public TELA_ADM_CADASTRAR_INFO_CONTATO() {
         initComponents();
         setLocationRelativeTo(null);
+        TelaUtil.padronizarTela(this);
     }
 
     /**

@@ -126,18 +126,16 @@
                           <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="JTFsenha1" pref="257" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="JTFsenha2" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="JLBsenha2" min="-2" pref="110" max="-2" attributes="0"/>
-                                      <Component id="JLBsenha" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                                      <Component id="JLBusuario1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="JTFusuario" alignment="0" pref="257" max="32767" attributes="0"/>
-                                          <Component id="JTFsenha" alignment="0" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Component id="JLBsenha1" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                              <Component id="JTFsenha2" alignment="0" max="32767" attributes="0"/>
+                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                  <Component id="JLBsenha2" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="JLBsenha" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="JLBusuario1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="JTFusuario" alignment="0" pref="257" max="32767" attributes="0"/>
+                                      <Component id="JTFsenha" alignment="0" max="32767" attributes="0"/>
                                   </Group>
+                                  <Component id="JLBsenha1" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
