@@ -13,7 +13,9 @@ import javax.swing.JFrame;
 public class TelaUtil {
 
     public static void padronizarTela(JFrame frame) {
-        frame.setSize(960, 600); // Define um tamanho fixo (ajuste conforme necessário)
+        frame.setSize(960, 600); // Define um tamanho inicial
+        frame.setMinimumSize(new java.awt.Dimension(960, 600)); // Define um tamanho mínimo
         frame.setLocationRelativeTo(null); // Centraliza a tela
+        frame.pack(); // Ajusta automaticamente ao conteúdo
     }
 }
