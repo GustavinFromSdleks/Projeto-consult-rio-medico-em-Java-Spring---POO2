@@ -4,6 +4,7 @@
  */
 package com.mycompany.projeto_consultoriomedico.Recepcionista;
 
+import com.mycompany.projeto_consultoriomedico.Manager.AuthManager;
 import com.mycompany.projeto_consultoriomedico.Manager.RecepcionistaManager;
 import com.mycompany.projeto_consultoriomedico.TelaUtil;
 import javax.swing.JOptionPane;
@@ -356,7 +357,7 @@ public class Tela_Cadastrar_Recepcionista extends javax.swing.JFrame {
     }//GEN-LAST:event_JBTsairActionPerformed
 
     private void JBTvoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTvoltarActionPerformed
-       String nome = txtNomeRec.getText();
+        String nome = txtNomeRec.getText();
         String cpf = txtCpfRec.getText();
         String estado =  txtEstadoRec.getText();
         String cidade =  txtCidadeRec.getText();
@@ -367,7 +368,7 @@ public class Tela_Cadastrar_Recepcionista extends javax.swing.JFrame {
         String login =  txtLoginRec.getText();
         String  password =  txtSenhaRec.getText();
 
-        String response = RecepcionistaManager.createRecepcionista(nome, cpf, estado, cidade, bairro, rua, numero , telefone, login, password);
+        String response = AuthManager.registerRecepcionista(nome, cpf, estado, cidade, bairro, rua, numero , telefone, login, password);
         JOptionPane.showMessageDialog(null, response);
     }//GEN-LAST:event_JBTvoltarActionPerformed
 

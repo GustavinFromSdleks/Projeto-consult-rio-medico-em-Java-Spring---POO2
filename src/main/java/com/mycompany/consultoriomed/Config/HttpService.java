@@ -35,8 +35,9 @@ public class HttpService {
                 wr.flush();
             }
 
-            // Obtém a resposta
-            return getResponse(connection);
+             String response = getResponse(connection);
+            System.out.println("Resposta da API: " + response); // Para depuração, exibe a resposta no console
+            return response;
         } catch (Exception e) {
             return "Erro na requisição: " + e.getMessage();
         }

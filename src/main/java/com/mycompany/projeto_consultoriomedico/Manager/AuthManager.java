@@ -56,7 +56,7 @@ public class AuthManager {
     public static String registerMedico(String nome, String cpf, String crm, String especialidade,
                                         String estado, String cidade, String bairro, String rua,
                                         int numero, String telefone, String login, String password) {
-        String endpoint = "/auth/medico/register";
+        String endpoint = "auth/medico/register";
         JSONObject json = new JSONObject();
         json.put("nome", nome);
         json.put("cpf", cpf);
@@ -70,7 +70,7 @@ public class AuthManager {
         json.put("telefone", telefone);
         json.put("login", login);
         json.put("password", password);
-        json.put("role", "ADMIN");
+        json.put("role", "MEDICO");
 
         return HttpService.sendPostRequest(endpoint, json.toString(), true);
     }
@@ -91,7 +91,7 @@ public class AuthManager {
         json.put("telefone", telefone);
         json.put("login", login);
         json.put("password", password);
-        json.put("role", "ADMIN");
+        json.put("role", "RECEPCIONISTA");
 
         return HttpService.sendPostRequest(endpoint, json.toString(), true);
     }

@@ -11,30 +11,6 @@ public class RecepcionistaManager {
 
     private static final String BASE_URL = "https://lucas4897.c44.integrator.host/recepcionista/";
 
-    // Cadastra um novo recepcionista
-    public static String createRecepcionista(String cpf, String nome, String estado, 
-                                             String cidade, String bairro, String rua, int numero, 
-                                             String telefone, String login, String password) {
-        try {
-            JSONObject requestBody = new JSONObject();
-            requestBody.put("nome", nome);
-            requestBody.put("cpf", cpf);
-            requestBody.put("estado", estado);
-            requestBody.put("cidade", cidade);
-            requestBody.put("bairro", bairro);
-            requestBody.put("rua", rua);
-            requestBody.put("numero", numero);
-            requestBody.put("telefone", telefone);
-            requestBody.put("login", login);
-            requestBody.put("password", password);
-            requestBody.put("role", "USER");
-
-            return sendPostRequest("create", requestBody.toString());
-        } catch (Exception e) {
-            return "Erro ao criar JSON: " + e.getMessage();
-        }
-    }
-
     // Atualiza um recepcionista pelo CPF
     public static String updateRecepcionista(String cpf, String nome, String estado, 
                                              String cidade, String bairro, String rua, int numero, 
