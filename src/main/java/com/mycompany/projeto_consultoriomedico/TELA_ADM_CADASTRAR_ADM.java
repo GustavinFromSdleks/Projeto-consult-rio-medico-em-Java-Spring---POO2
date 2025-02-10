@@ -104,6 +104,11 @@ public class TELA_ADM_CADASTRAR_ADM extends javax.swing.JFrame {
 
         JBTvoltar.setText("Continuar ");
         JBTvoltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        JBTvoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBTvoltarActionPerformed(evt);
+            }
+        });
 
         JBTsair.setText("Voltar");
         JBTsair.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -194,6 +199,10 @@ public class TELA_ADM_CADASTRAR_ADM extends javax.swing.JFrame {
          TELA_ADM_VIEW_ADMINISTRADOR telaAnterior = new TELA_ADM_VIEW_ADMINISTRADOR();
          telaAnterior.setVisible(true);
     }//GEN-LAST:event_JBTsairActionPerformed
+
+    private void JBTvoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTvoltarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JBTvoltarActionPerformed
 
     /**
      * @param args the command line arguments
