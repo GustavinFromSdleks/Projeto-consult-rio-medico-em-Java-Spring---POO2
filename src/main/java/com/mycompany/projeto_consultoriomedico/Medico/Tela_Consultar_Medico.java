@@ -2,9 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.projeto_consultoriomedico;
+package com.mycompany.projeto_consultoriomedico.Medico;
 
+import com.mycompany.projeto_consultoriomedico.Medico.Tela_Adm_View_Medico;
 import com.mycompany.projeto_consultoriomedico.Manager.MedicoManager;
+import com.mycompany.projeto_consultoriomedico.TelaUtil;
 import javax.swing.JOptionPane;
 import org.json.JSONObject;
 
@@ -12,12 +14,12 @@ import org.json.JSONObject;
  *
  * @author User
  */
-public class TELA_ADM_CONSULTAR_MEDICO extends javax.swing.JFrame {
+public class Tela_Consultar_Medico extends javax.swing.JFrame {
 
     /**
      * Creates new form TELA_ADM_CONSULTAR_MEDICO
      */
-    public TELA_ADM_CONSULTAR_MEDICO() {
+    public Tela_Consultar_Medico() {
         initComponents();
         setLocationRelativeTo(null);
         TelaUtil.padronizarTela(this);
@@ -263,7 +265,7 @@ public class TELA_ADM_CONSULTAR_MEDICO extends javax.swing.JFrame {
 
     private void JBTsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTsairActionPerformed
         this.dispose();
-         TELA_ADM_VIEW_MEDICO telaAnterior = new TELA_ADM_VIEW_MEDICO();
+         Tela_Adm_View_Medico telaAnterior = new Tela_Adm_View_Medico();
          telaAnterior.setVisible(true);
     }//GEN-LAST:event_JBTsairActionPerformed
 
@@ -324,20 +326,21 @@ public class TELA_ADM_CONSULTAR_MEDICO extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_CONSULTAR_MEDICO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Consultar_Medico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_CONSULTAR_MEDICO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Consultar_Medico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_CONSULTAR_MEDICO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Consultar_Medico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_CONSULTAR_MEDICO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Consultar_Medico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TELA_ADM_CONSULTAR_MEDICO().setVisible(true);
+                new Tela_Consultar_Medico().setVisible(true);
             }
         });
     }

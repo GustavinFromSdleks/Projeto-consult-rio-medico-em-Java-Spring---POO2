@@ -2,18 +2,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.projeto_consultoriomedico;
+package com.mycompany.projeto_consultoriomedico.Adm;
+
+import com.mycompany.projeto_consultoriomedico.Adm.Tela_Cadastrar_Adm;
+import com.mycompany.projeto_consultoriomedico.Adm.Tela_Dashboard_Adm;
+import com.mycompany.projeto_consultoriomedico.TelaUtil;
 
 /**
  *
  * @author User
  */
-public class TELA_ADM_VIEW_ADMINISTRADOR extends javax.swing.JFrame {
+public class Tela_Adm_View_Adm extends javax.swing.JFrame {
 
     /**
      * Creates new form TELA_ADM_VIEW_ADMINISTRADOR
      */
-    public TELA_ADM_VIEW_ADMINISTRADOR() {
+    public Tela_Adm_View_Adm() {
         initComponents();
         setLocationRelativeTo(null);
         TelaUtil.padronizarTela(this);
@@ -269,19 +273,19 @@ public class TELA_ADM_VIEW_ADMINISTRADOR extends javax.swing.JFrame {
     }//GEN-LAST:event_JBTalterarRecepcionistaActionPerformed
 
     private void JBTconsultarRecepcionistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTconsultarRecepcionistaActionPerformed
-        TELA_ADM_CONSULTAR_ADM TelaConsultADM = new TELA_ADM_CONSULTAR_ADM();
+        Tela_Consultar_Adm TelaConsultADM = new Tela_Consultar_Adm();
         TelaConsultADM.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_JBTconsultarRecepcionistaActionPerformed
 
     private void JBTcadastrarRecepcionistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTcadastrarRecepcionistaActionPerformed
-        TELA_ADM_CADASTRAR_ADM telaCadAdm = new TELA_ADM_CADASTRAR_ADM();
+        Tela_Cadastrar_Adm telaCadAdm = new Tela_Cadastrar_Adm();
         telaCadAdm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_JBTcadastrarRecepcionistaActionPerformed
 
     private void JBTexcluirRecepcionistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTexcluirRecepcionistaActionPerformed
-       TELA_ADM_EXCLUIR_USUARIO telaExclui = new TELA_ADM_EXCLUIR_USUARIO();
+       Tela_Excluir_User telaExclui = new Tela_Excluir_User();
         telaExclui.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_JBTexcluirRecepcionistaActionPerformed
@@ -296,7 +300,7 @@ public class TELA_ADM_VIEW_ADMINISTRADOR extends javax.swing.JFrame {
 
     private void JBTvoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTvoltarActionPerformed
         this.dispose();
-        TELA_CENTRAL_ADM telaAnterior = new TELA_CENTRAL_ADM();
+        Tela_Dashboard_Adm telaAnterior = new Tela_Dashboard_Adm();
         telaAnterior.setVisible(true);
     }//GEN-LAST:event_JBTvoltarActionPerformed
 
@@ -317,20 +321,21 @@ public class TELA_ADM_VIEW_ADMINISTRADOR extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_VIEW_ADMINISTRADOR.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Adm_View_Adm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_VIEW_ADMINISTRADOR.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Adm_View_Adm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_VIEW_ADMINISTRADOR.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Adm_View_Adm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_VIEW_ADMINISTRADOR.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Adm_View_Adm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TELA_ADM_VIEW_ADMINISTRADOR().setVisible(true);
+                new Tela_Adm_View_Adm().setVisible(true);
             }
         });
     }

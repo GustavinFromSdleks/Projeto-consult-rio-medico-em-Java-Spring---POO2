@@ -8,12 +8,12 @@ package com.mycompany.projeto_consultoriomedico;
  *
  * @author User
  */
-public class TELA_ADM_FINALIZAR_CADASTRO extends javax.swing.JFrame {
+public class Tela_Final_Cadastro extends javax.swing.JFrame {
 
     /**
      * Creates new form TELA_ADM_FINALIZAR_CADASTRO
      */
-    public TELA_ADM_FINALIZAR_CADASTRO() {
+    public Tela_Final_Cadastro() {
         initComponents();
         setLocationRelativeTo(null);
         TelaUtil.padronizarTela(this);
@@ -49,8 +49,6 @@ public class TELA_ADM_FINALIZAR_CADASTRO extends javax.swing.JFrame {
         JLBnomeClinica1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         JLBnomeClinica1.setForeground(new java.awt.Color(255, 255, 255));
         JLBnomeClinica1.setText("SDLEKS MED");
-
-        JLBiconeClinica.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Documents\\NetBeansProjects\\Projeto_consultorioMedico\\src\\main\\java\\com\\mycompany\\projeto_consultoriomedico\\icons8-hospital-64.png")); // NOI18N
 
         jPanel2.setBackground(new java.awt.Color(245, 245, 245));
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -219,20 +217,21 @@ public class TELA_ADM_FINALIZAR_CADASTRO extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_FINALIZAR_CADASTRO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Final_Cadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_FINALIZAR_CADASTRO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Final_Cadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_FINALIZAR_CADASTRO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Final_Cadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_FINALIZAR_CADASTRO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Final_Cadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TELA_ADM_FINALIZAR_CADASTRO().setVisible(true);
+                new Tela_Final_Cadastro().setVisible(true);
             }
         });
     }

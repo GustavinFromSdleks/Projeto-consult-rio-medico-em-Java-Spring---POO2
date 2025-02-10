@@ -2,18 +2,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.projeto_consultoriomedico;
+package com.mycompany.projeto_consultoriomedico.Medico;
+
+import com.mycompany.projeto_consultoriomedico.Adm.Tela_Excluir_User;
+import com.mycompany.projeto_consultoriomedico.Adm.Tela_Dashboard_Adm;
+import com.mycompany.projeto_consultoriomedico.TelaUtil;
 
 /**
  *
  * @author User
  */
-public class TELA_ADM_VIEW_RECEPCIONISTA extends javax.swing.JFrame {
+public class Tela_Adm_View_Medico extends javax.swing.JFrame {
 
     /**
-     * Creates new form TELA_ADM_VIEW_RECEPCIONISTA
+     * Creates new form TELA_ADM_VIEW_MEDICO
      */
-    public TELA_ADM_VIEW_RECEPCIONISTA() {
+    public Tela_Adm_View_Medico() {
         initComponents();
         setLocationRelativeTo(null);
         TelaUtil.padronizarTela(this);
@@ -28,6 +32,13 @@ public class TELA_ADM_VIEW_RECEPCIONISTA extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel3 = new javax.swing.JPanel();
+        JLBversion = new javax.swing.JLabel();
+        JBTvoltar = new javax.swing.JButton();
+        JBTsair = new javax.swing.JButton();
+        JLBsubtitulo = new javax.swing.JLabel();
+        JBTselectMedico = new javax.swing.JButton();
+        JLBtitulo = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         JBTcadastrarRecepcionista = new javax.swing.JButton();
         JBTalterarRecepcionista = new javax.swing.JButton();
@@ -36,15 +47,92 @@ public class TELA_ADM_VIEW_RECEPCIONISTA extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         JLBnomeClinica = new javax.swing.JLabel();
         JLBiconeClinica = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        JLBversion = new javax.swing.JLabel();
-        JBTvoltar = new javax.swing.JButton();
-        JBTsair = new javax.swing.JButton();
-        JLBsubtitulo = new javax.swing.JLabel();
-        JBTselectRecepcionista = new javax.swing.JButton();
-        JLBtitulo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel3.setBackground(new java.awt.Color(245, 245, 245));
+
+        JLBversion.setText("Version 0.01");
+
+        JBTvoltar.setText("Voltar");
+        JBTvoltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        JBTvoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBTvoltarActionPerformed(evt);
+            }
+        });
+
+        JBTsair.setText("Sair");
+        JBTsair.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        JBTsair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBTsairActionPerformed(evt);
+            }
+        });
+
+        JLBsubtitulo.setBackground(new java.awt.Color(94, 94, 94));
+        JLBsubtitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        JLBsubtitulo.setForeground(new java.awt.Color(94, 94, 94));
+        JLBsubtitulo.setText("Gerenciando Medico");
+
+        JBTselectMedico.setBackground(new java.awt.Color(245, 245, 245));
+        JBTselectMedico.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        JBTselectMedico.setForeground(new java.awt.Color(43, 104, 41));
+        JBTselectMedico.setText("MEDICO");
+        JBTselectMedico.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        JBTselectMedico.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        JBTselectMedico.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        JBTselectMedico.setIconTextGap(35);
+        JBTselectMedico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBTselectMedicoActionPerformed(evt);
+            }
+        });
+
+        JLBtitulo.setBackground(new java.awt.Color(88, 93, 96));
+        JLBtitulo.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        JLBtitulo.setForeground(new java.awt.Color(88, 93, 96));
+        JLBtitulo.setText("DASHBOARD ADMINISTRADOR");
+        JLBtitulo.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        JLBtitulo.setIconTextGap(1);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(JLBversion))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(88, 88, 88)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(JBTvoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JBTsair, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(JLBtitulo)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JLBsubtitulo)
+                            .addComponent(JBTselectMedico, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(JLBtitulo)
+                .addGap(51, 51, 51)
+                .addComponent(JLBsubtitulo)
+                .addGap(60, 60, 60)
+                .addComponent(JBTselectMedico)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(JBTvoltar)
+                .addGap(18, 18, 18)
+                .addComponent(JBTsair)
+                .addGap(18, 18, 18)
+                .addComponent(JLBversion))
+        );
 
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
         jPanel1.setForeground(new java.awt.Color(104, 104, 104));
@@ -118,12 +206,12 @@ public class TELA_ADM_VIEW_RECEPCIONISTA extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(13, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JBTcadastrarRecepcionista)
                     .addComponent(JBTalterarRecepcionista)
                     .addComponent(JBTconsultarRecepcionista)
-                    .addComponent(JBTexcluirRecepcionista)
-                    .addComponent(JBTcadastrarRecepcionista))
+                    .addComponent(JBTexcluirRecepcionista))
                 .addContainerGap())
         );
 
@@ -155,93 +243,13 @@ public class TELA_ADM_VIEW_RECEPCIONISTA extends javax.swing.JFrame {
                 .addContainerGap(248, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel3.setBorder(new javax.swing.border.MatteBorder(null));
-
-        JLBversion.setText("Version 0.01");
-
-        JBTvoltar.setText("Voltar");
-        JBTvoltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        JBTvoltar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JBTvoltarActionPerformed(evt);
-            }
-        });
-
-        JBTsair.setText("Sair");
-        JBTsair.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        JBTsair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JBTsairActionPerformed(evt);
-            }
-        });
-
-        JLBsubtitulo.setBackground(new java.awt.Color(94, 94, 94));
-        JLBsubtitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        JLBsubtitulo.setForeground(new java.awt.Color(94, 94, 94));
-        JLBsubtitulo.setText("Gerenciando Recepcionista");
-
-        JBTselectRecepcionista.setBackground(new java.awt.Color(245, 245, 245));
-        JBTselectRecepcionista.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        JBTselectRecepcionista.setForeground(new java.awt.Color(43, 104, 41));
-        JBTselectRecepcionista.setText("RECEPCIONISTA");
-        JBTselectRecepcionista.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        JBTselectRecepcionista.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        JBTselectRecepcionista.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        JBTselectRecepcionista.setIconTextGap(35);
-
-        JLBtitulo.setBackground(new java.awt.Color(88, 93, 96));
-        JLBtitulo.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        JLBtitulo.setForeground(new java.awt.Color(88, 93, 96));
-        JLBtitulo.setText("DASHBOARD ADMINISTRADOR");
-        JLBtitulo.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        JLBtitulo.setIconTextGap(1);
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(JLBversion))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(88, 88, 88)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(JBTvoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(JBTsair, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(JBTselectRecepcionista, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(JLBsubtitulo))
-                    .addComponent(JLBtitulo))
-                .addContainerGap(18, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(JLBtitulo)
-                .addGap(45, 45, 45)
-                .addComponent(JLBsubtitulo)
-                .addGap(18, 18, 18)
-                .addComponent(JBTselectRecepcionista)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(JBTvoltar)
-                .addGap(18, 18, 18)
-                .addComponent(JBTsair)
-                .addGap(18, 18, 18)
-                .addComponent(JLBversion))
-        );
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -260,7 +268,7 @@ public class TELA_ADM_VIEW_RECEPCIONISTA extends javax.swing.JFrame {
 
     private void JBTvoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTvoltarActionPerformed
         this.dispose();
-         TELA_CENTRAL_ADM telaAnterior = new TELA_CENTRAL_ADM();
+         Tela_Dashboard_Adm telaAnterior = new Tela_Dashboard_Adm();
          telaAnterior.setVisible(true);
     }//GEN-LAST:event_JBTvoltarActionPerformed
 
@@ -268,24 +276,28 @@ public class TELA_ADM_VIEW_RECEPCIONISTA extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_JBTsairActionPerformed
 
+    private void JBTselectMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTselectMedicoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JBTselectMedicoActionPerformed
+
     private void JBTalterarRecepcionistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTalterarRecepcionistaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JBTalterarRecepcionistaActionPerformed
 
     private void JBTcadastrarRecepcionistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTcadastrarRecepcionistaActionPerformed
-        TELA_ADM_CADASTRAR_RECEPCIONISTA telaCadRec = new TELA_ADM_CADASTRAR_RECEPCIONISTA();
-        telaCadRec.setVisible(true);
+        Tela_Cadastrar_Medico telaCadMed = new Tela_Cadastrar_Medico();
+        telaCadMed.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_JBTcadastrarRecepcionistaActionPerformed
 
     private void JBTconsultarRecepcionistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTconsultarRecepcionistaActionPerformed
-        TELA_ADM_CONSULTAR_RECEPCIONISTA telaConsRec = new TELA_ADM_CONSULTAR_RECEPCIONISTA();
-        telaConsRec.setVisible(true);
+        Tela_Consultar_Medico telaConsMed = new Tela_Consultar_Medico();
+        telaConsMed.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_JBTconsultarRecepcionistaActionPerformed
 
     private void JBTexcluirRecepcionistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTexcluirRecepcionistaActionPerformed
-        TELA_ADM_EXCLUIR_USUARIO telaExclui = new TELA_ADM_EXCLUIR_USUARIO();
+        Tela_Excluir_User telaExclui = new Tela_Excluir_User();
         telaExclui.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_JBTexcluirRecepcionistaActionPerformed
@@ -307,20 +319,21 @@ public class TELA_ADM_VIEW_RECEPCIONISTA extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_VIEW_RECEPCIONISTA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Adm_View_Medico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_VIEW_RECEPCIONISTA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Adm_View_Medico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_VIEW_RECEPCIONISTA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Adm_View_Medico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_VIEW_RECEPCIONISTA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Adm_View_Medico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TELA_ADM_VIEW_RECEPCIONISTA().setVisible(true);
+                new Tela_Adm_View_Medico().setVisible(true);
             }
         });
     }
@@ -331,7 +344,7 @@ public class TELA_ADM_VIEW_RECEPCIONISTA extends javax.swing.JFrame {
     private javax.swing.JButton JBTconsultarRecepcionista;
     private javax.swing.JButton JBTexcluirRecepcionista;
     private javax.swing.JButton JBTsair;
-    private javax.swing.JButton JBTselectRecepcionista;
+    private javax.swing.JButton JBTselectMedico;
     private javax.swing.JButton JBTvoltar;
     private javax.swing.JLabel JLBiconeClinica;
     private javax.swing.JLabel JLBnomeClinica;

@@ -8,12 +8,12 @@ package com.mycompany.projeto_consultoriomedico;
  *
  * @author User
  */
-public class TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO extends javax.swing.JFrame {
+public class Tela_Confirmar_Alteracao_Usuarios extends javax.swing.JFrame {
 
     /**
-     * Creates new form TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO
+     * Creates new form TELA_ADM_CONFIRMAR_ALTERACAO_USUARIOS
      */
-    public TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO() {
+    public Tela_Confirmar_Alteracao_Usuarios() {
         initComponents();
         setLocationRelativeTo(null);
         TelaUtil.padronizarTela(this);
@@ -28,33 +28,39 @@ public class TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jCheckBox4 = new javax.swing.JCheckBox();
+        JTFusuario6 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         JBTsair = new javax.swing.JButton();
         JLBversion1 = new javax.swing.JLabel();
         JLBusuario2 = new javax.swing.JLabel();
         JTFusuario = new javax.swing.JTextField();
+        jCheckBox1 = new javax.swing.JCheckBox();
         JLBusuario3 = new javax.swing.JLabel();
         JTFusuario2 = new javax.swing.JTextField();
         JLBusuario4 = new javax.swing.JLabel();
+        JBTsair1 = new javax.swing.JButton();
         JLBsenha2 = new javax.swing.JLabel();
         JTFusuario3 = new javax.swing.JTextField();
+        JLBversion2 = new javax.swing.JLabel();
         JBTsair2 = new javax.swing.JButton();
         JTFusuario4 = new javax.swing.JTextField();
         JLBusuario5 = new javax.swing.JLabel();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jCheckBox5 = new javax.swing.JCheckBox();
         JTFusuario5 = new javax.swing.JTextField();
         JTFusuario7 = new javax.swing.JTextField();
         JLBusuario6 = new javax.swing.JLabel();
         JLBusuario7 = new javax.swing.JLabel();
-        JTFusuario8 = new javax.swing.JTextField();
-        JLBusuario8 = new javax.swing.JLabel();
-        JTFusuario6 = new javax.swing.JTextField();
-        JLBsenha3 = new javax.swing.JLabel();
-        JTFusuario9 = new javax.swing.JTextField();
-        JLBusuario9 = new javax.swing.JLabel();
-        JLBsenha4 = new javax.swing.JLabel();
-        JTFusuario10 = new javax.swing.JTextField();
-        JLBversion3 = new javax.swing.JLabel();
+
+        jCheckBox4.setText("nao alterar");
+
+        JTFusuario6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTFusuario6ActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -71,7 +77,7 @@ public class TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO extends javax.swing.JFrame {
         JLBusuario2.setBackground(new java.awt.Color(88, 93, 96));
         JLBusuario2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         JLBusuario2.setForeground(new java.awt.Color(101, 98, 98));
-        JLBusuario2.setText("CONFIRMAR EXCLUSAO DE USUARIO");
+        JLBusuario2.setText("ALTERAR USUARIO");
 
         JTFusuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,10 +85,12 @@ public class TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO extends javax.swing.JFrame {
             }
         });
 
+        jCheckBox1.setText("nao alterar");
+
         JLBusuario3.setBackground(new java.awt.Color(88, 93, 96));
         JLBusuario3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         JLBusuario3.setForeground(new java.awt.Color(101, 98, 98));
-        JLBusuario3.setText("Estado");
+        JLBusuario3.setText("Novo Nome ");
 
         JTFusuario2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,12 +101,15 @@ public class TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO extends javax.swing.JFrame {
         JLBusuario4.setBackground(new java.awt.Color(88, 93, 96));
         JLBusuario4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         JLBusuario4.setForeground(new java.awt.Color(101, 98, 98));
-        JLBusuario4.setText("CPF");
+        JLBusuario4.setText("Antigo CPF");
+
+        JBTsair1.setText("Salvar e Sair");
+        JBTsair1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         JLBsenha2.setBackground(new java.awt.Color(88, 93, 96));
         JLBsenha2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         JLBsenha2.setForeground(new java.awt.Color(101, 98, 98));
-        JLBsenha2.setText("Telefone");
+        JLBsenha2.setText("Antigo numero Telefone");
 
         JTFusuario3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,7 +117,11 @@ public class TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO extends javax.swing.JFrame {
             }
         });
 
-        JBTsair2.setText("Excluir Usario");
+        JLBversion2.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        JLBversion2.setForeground(new java.awt.Color(88, 93, 96));
+        JLBversion2.setText("OBS: nao deixe campos vazios se nao for alterar tique em nao alterar");
+
+        JBTsair2.setText("Prosseguir");
         JBTsair2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         JTFusuario4.addActionListener(new java.awt.event.ActionListener() {
@@ -118,7 +133,11 @@ public class TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO extends javax.swing.JFrame {
         JLBusuario5.setBackground(new java.awt.Color(88, 93, 96));
         JLBusuario5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         JLBusuario5.setForeground(new java.awt.Color(101, 98, 98));
-        JLBusuario5.setText("Nome");
+        JLBusuario5.setText("Antigo Nome");
+
+        jCheckBox2.setText("nao alterar");
+
+        jCheckBox5.setText("nao alterar");
 
         JTFusuario5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,120 +154,78 @@ public class TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO extends javax.swing.JFrame {
         JLBusuario6.setBackground(new java.awt.Color(88, 93, 96));
         JLBusuario6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         JLBusuario6.setForeground(new java.awt.Color(101, 98, 98));
-        JLBusuario6.setText("Numero");
+        JLBusuario6.setText("Novo numero Telefone");
 
         JLBusuario7.setBackground(new java.awt.Color(88, 93, 96));
         JLBusuario7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         JLBusuario7.setForeground(new java.awt.Color(101, 98, 98));
-        JLBusuario7.setText("Cidade");
-
-        JTFusuario8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTFusuario8ActionPerformed(evt);
-            }
-        });
-
-        JLBusuario8.setBackground(new java.awt.Color(88, 93, 96));
-        JLBusuario8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        JLBusuario8.setForeground(new java.awt.Color(101, 98, 98));
-        JLBusuario8.setText("Bairro");
-
-        JTFusuario6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTFusuario6ActionPerformed(evt);
-            }
-        });
-
-        JLBsenha3.setBackground(new java.awt.Color(88, 93, 96));
-        JLBsenha3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        JLBsenha3.setForeground(new java.awt.Color(101, 98, 98));
-        JLBsenha3.setText("Antigo numero");
-
-        JTFusuario9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTFusuario9ActionPerformed(evt);
-            }
-        });
-
-        JLBusuario9.setBackground(new java.awt.Color(88, 93, 96));
-        JLBusuario9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        JLBusuario9.setForeground(new java.awt.Color(101, 98, 98));
-        JLBusuario9.setText("Rua");
-
-        JLBsenha4.setBackground(new java.awt.Color(88, 93, 96));
-        JLBsenha4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        JLBsenha4.setForeground(new java.awt.Color(101, 98, 98));
-        JLBsenha4.setText("CRM");
-
-        JTFusuario10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTFusuario10ActionPerformed(evt);
-            }
-        });
-
-        JLBversion3.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        JLBversion3.setForeground(new java.awt.Color(88, 93, 96));
-        JLBversion3.setText("OBS: se nao houver nao sera apresentado nenhum dado");
+        JLBusuario7.setText("Novo CPF ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(JBTsair1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(47, 47, 47)
+                        .addComponent(JBTsair2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JLBversion2))
+                .addGap(183, 183, 183))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(49, 49, 49)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(JTFusuario2, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(JTFusuario4, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(JLBusuario5)
-                                    .addComponent(JLBusuario4)
-                                    .addComponent(JTFusuario3, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(JLBsenha2)
-                                    .addComponent(JTFusuario6, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(JLBsenha3)
-                                    .addComponent(JTFusuario10, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(JLBsenha4))
-                                .addGap(112, 112, 112)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(JLBusuario6)
-                                    .addComponent(JTFusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(JLBusuario3)
-                                    .addComponent(JTFusuario7, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(JTFusuario5, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(JLBusuario7)
-                                    .addComponent(JTFusuario8, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(JLBusuario8)
-                                    .addComponent(JTFusuario9, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(JLBusuario9)))
-                            .addComponent(JLBversion3)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(137, 137, 137)
-                        .addComponent(JLBusuario2))
+                                .addComponent(JTFusuario2, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jCheckBox2))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(JTFusuario4, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jCheckBox1))
+                            .addComponent(JLBusuario5)
+                            .addComponent(JLBusuario4)
+                            .addComponent(JLBsenha2)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(JTFusuario3, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jCheckBox5)))
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JLBusuario6)
+                            .addComponent(JTFusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JLBusuario3)
+                            .addComponent(JTFusuario7, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JTFusuario5, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JLBusuario7)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(319, 319, 319)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(JBTsair, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(JLBversion1)))
+                        .addComponent(JLBversion1))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(289, 289, 289)
-                        .addComponent(JBTsair2, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(68, Short.MAX_VALUE))
+                        .addGap(240, 240, 240)
+                        .addComponent(JLBusuario2))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(299, 299, 299)
+                        .addComponent(JBTsair, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(14, 14, 14)
                 .addComponent(JLBusuario2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
+                .addGap(54, 54, 54)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JLBusuario3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JLBusuario5, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JTFusuario4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox1)
                     .addComponent(JTFusuario7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(7, 7, 7)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -257,38 +234,30 @@ public class TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JTFusuario2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox2)
                     .addComponent(JTFusuario5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JLBusuario8, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JLBsenha2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(3, 3, 3)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JTFusuario8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JTFusuario3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JLBsenha3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JLBusuario9, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JTFusuario9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JTFusuario10, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(JLBusuario6, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JLBsenha4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(JLBsenha2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(JTFusuario3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCheckBox5)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(JTFusuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(JLBversion2)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JTFusuario6, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JTFusuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(JLBversion3)
-                .addGap(18, 18, 18)
-                .addComponent(JBTsair2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JBTsair1)
+                    .addComponent(JBTsair2))
                 .addGap(18, 18, 18)
                 .addComponent(JBTsair)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 186, Short.MAX_VALUE)
                 .addComponent(JLBversion1)
                 .addContainerGap())
         );
@@ -297,10 +266,10 @@ public class TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(140, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(200, 200, 200)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(102, 102, 102))
+                .addContainerGap(236, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -341,25 +310,13 @@ public class TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JTFusuario5ActionPerformed
 
-    private void JTFusuario7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFusuario7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JTFusuario7ActionPerformed
-
-    private void JTFusuario8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFusuario8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JTFusuario8ActionPerformed
-
     private void JTFusuario6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFusuario6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JTFusuario6ActionPerformed
 
-    private void JTFusuario9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFusuario9ActionPerformed
+    private void JTFusuario7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFusuario7ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JTFusuario9ActionPerformed
-
-    private void JTFusuario10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFusuario10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JTFusuario10ActionPerformed
+    }//GEN-LAST:event_JTFusuario7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -378,50 +335,49 @@ public class TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Confirmar_Alteracao_Usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Confirmar_Alteracao_Usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Confirmar_Alteracao_Usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Confirmar_Alteracao_Usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TELA_ADM_CONFIRMAR_EXCLUSAO_USUARIO().setVisible(true);
+                new Tela_Confirmar_Alteracao_Usuarios().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JBTsair;
+    private javax.swing.JButton JBTsair1;
     private javax.swing.JButton JBTsair2;
     private javax.swing.JLabel JLBsenha2;
-    private javax.swing.JLabel JLBsenha3;
-    private javax.swing.JLabel JLBsenha4;
     private javax.swing.JLabel JLBusuario2;
     private javax.swing.JLabel JLBusuario3;
     private javax.swing.JLabel JLBusuario4;
     private javax.swing.JLabel JLBusuario5;
     private javax.swing.JLabel JLBusuario6;
     private javax.swing.JLabel JLBusuario7;
-    private javax.swing.JLabel JLBusuario8;
-    private javax.swing.JLabel JLBusuario9;
     private javax.swing.JLabel JLBversion1;
-    private javax.swing.JLabel JLBversion3;
+    private javax.swing.JLabel JLBversion2;
     private javax.swing.JTextField JTFusuario;
-    private javax.swing.JTextField JTFusuario10;
     private javax.swing.JTextField JTFusuario2;
     private javax.swing.JTextField JTFusuario3;
     private javax.swing.JTextField JTFusuario4;
     private javax.swing.JTextField JTFusuario5;
     private javax.swing.JTextField JTFusuario6;
     private javax.swing.JTextField JTFusuario7;
-    private javax.swing.JTextField JTFusuario8;
-    private javax.swing.JTextField JTFusuario9;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jCheckBox4;
+    private javax.swing.JCheckBox jCheckBox5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

@@ -2,19 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.projeto_consultoriomedico;
+package com.mycompany.projeto_consultoriomedico.Medico;
 import com.mycompany.projeto_consultoriomedico.Manager.MedicoManager;
+import com.mycompany.projeto_consultoriomedico.TelaUtil;
 import javax.swing.JOptionPane;
 /**
  *
  * @author User
  */
-public class TELA_ADM_CADASTRAR_MEDICO extends javax.swing.JFrame {
+public class Tela_Cadastrar_Medico extends javax.swing.JFrame {
 
     /**
      * Creates new form TELA_ADM_CADASTRAR_MEDICO
      */
-    public TELA_ADM_CADASTRAR_MEDICO() {
+    public Tela_Cadastrar_Medico() {
         initComponents();
         setLocationRelativeTo(null);
         TelaUtil.padronizarTela(this);
@@ -456,20 +457,21 @@ public class TELA_ADM_CADASTRAR_MEDICO extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_CADASTRAR_MEDICO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Cadastrar_Medico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_CADASTRAR_MEDICO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Cadastrar_Medico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_CADASTRAR_MEDICO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Cadastrar_Medico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_CADASTRAR_MEDICO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Cadastrar_Medico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TELA_ADM_CADASTRAR_MEDICO().setVisible(true);
+                new Tela_Cadastrar_Medico().setVisible(true);
             }
         });
     }

@@ -8,12 +8,12 @@ package com.mycompany.projeto_consultoriomedico;
  *
  * @author User
  */
-public class TELA_ADM_ALTERAR_DADOS_CONTATO extends javax.swing.JFrame {
+public class Tela_Alterar_Dados_Contato extends javax.swing.JFrame {
 
     /**
      * Creates new form TELA_ADM_ALTERAR_DADOS_CONTATO
      */
-    public TELA_ADM_ALTERAR_DADOS_CONTATO() {
+    public Tela_Alterar_Dados_Contato() {
         initComponents();
         setLocationRelativeTo(null);
         TelaUtil.padronizarTela(this);
@@ -423,20 +423,21 @@ public class TELA_ADM_ALTERAR_DADOS_CONTATO extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_ALTERAR_DADOS_CONTATO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Alterar_Dados_Contato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_ALTERAR_DADOS_CONTATO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Alterar_Dados_Contato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_ALTERAR_DADOS_CONTATO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Alterar_Dados_Contato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TELA_ADM_ALTERAR_DADOS_CONTATO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Alterar_Dados_Contato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TELA_ADM_ALTERAR_DADOS_CONTATO().setVisible(true);
+                new Tela_Alterar_Dados_Contato().setVisible(true);
             }
         });
     }

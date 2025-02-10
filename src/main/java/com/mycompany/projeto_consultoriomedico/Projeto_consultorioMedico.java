@@ -12,7 +12,7 @@ public class Projeto_consultorioMedico {
 
     public static void main(String[] args) {
         
-       TELA_LOGIN_ADM LoginADM = new TELA_LOGIN_ADM();
+       Tela_Login LoginADM = new Tela_Login();
        LoginADM.setVisible(true);
        
        //TELA_CENTRAL_ADM TelaCentralADM = new TELA_CENTRAL_ADM();
