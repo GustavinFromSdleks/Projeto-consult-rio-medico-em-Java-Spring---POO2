@@ -124,21 +124,11 @@
                                   <Component id="JLBusuario2" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <Component id="JTFusuario" min="-2" pref="245" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="JCHECKnomeRecepcionista" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="JTFusuario2" min="-2" pref="245" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="JCHECKcpfRecepcionista" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="JLBusuario3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="JTFusuario2" alignment="0" min="-2" pref="245" max="-2" attributes="0"/>
                                           <Component id="JLBusuario4" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="JLBversion2" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -165,20 +155,10 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                       <Component id="JLBusuario2" min="-2" pref="28" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                      <Component id="JLBusuario3" min="-2" pref="28" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="JTFusuario" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="JCHECKnomeRecepcionista" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
                       <Component id="JLBusuario4" min="-2" pref="28" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="JCHECKcpfRecepcionista" min="-2" max="-2" attributes="0"/>
-                          <Component id="JTFusuario2" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="JTFusuario2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="JLBversion2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -226,30 +206,6 @@
                   <Color blue="62" green="62" red="65" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="CONSULTAR RECEPCIONISTA"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="JTFusuario">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JTFusuarioActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="JCHECKcpfRecepcionista">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="selecionar"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="JLBusuario3">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="60" green="5d" red="58" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="62" green="62" red="65" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Nome "/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="JTFusuario2">
@@ -303,11 +259,6 @@
                     <BevelBorder/>
                   </Border>
                 </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="JCHECKnomeRecepcionista">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="selecionar"/>
               </Properties>
             </Component>
           </SubComponents>

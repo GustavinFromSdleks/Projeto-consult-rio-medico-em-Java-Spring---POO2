@@ -5,6 +5,7 @@
 package com.mycompany.projeto_consultoriomedico.Recepcionista;
 
 import com.mycompany.projeto_consultoriomedico.TelaUtil;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -15,6 +16,14 @@ public class Tela_Resultado_Consulta_Recepcionista extends javax.swing.JFrame {
     /**
      * Creates new form TELA_ADM_RESULTADO_CONSULTA_RECEPCIONISTA_ADM
      */
+    public void exibirDadosRecepcionista(String nome, String cpf, String telefone) {
+    // Adiciona os dados na tabela
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        model.setRowCount(0); // Limpa qualquer dado anterior
+        model.addRow(new Object[]{nome, cpf, telefone});
+    }
+
+
     public Tela_Resultado_Consulta_Recepcionista() {
         initComponents();
         setLocationRelativeTo(null);
@@ -54,13 +63,13 @@ public class Tela_Resultado_Consulta_Recepcionista extends javax.swing.JFrame {
         jTable1.setBackground(new java.awt.Color(245, 245, 245));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Nome", "Cpf", "ID", "Telefone"
+                "Nome", "Cpf", "Telefone"
             }
         ));
         jScrollPane1.setViewportView(jTable1);

@@ -40,15 +40,11 @@ public class Tela_Consultar_Recepcionista extends javax.swing.JFrame {
         JBTsair = new javax.swing.JButton();
         JLBversion1 = new javax.swing.JLabel();
         JLBusuario2 = new javax.swing.JLabel();
-        JTFusuario = new javax.swing.JTextField();
-        JCHECKcpfRecepcionista = new javax.swing.JCheckBox();
-        JLBusuario3 = new javax.swing.JLabel();
         JTFusuario2 = new javax.swing.JTextField();
         JLBusuario4 = new javax.swing.JLabel();
         JBTsair1 = new javax.swing.JButton();
         JLBversion2 = new javax.swing.JLabel();
         JBTsair2 = new javax.swing.JButton();
-        JCHECKnomeRecepcionista = new javax.swing.JCheckBox();
         JLBnomeClinica1 = new javax.swing.JLabel();
         JLBiconeClinica = new javax.swing.JLabel();
 
@@ -81,19 +77,6 @@ public class Tela_Consultar_Recepcionista extends javax.swing.JFrame {
         JLBusuario2.setForeground(new java.awt.Color(101, 98, 98));
         JLBusuario2.setText("CONSULTAR RECEPCIONISTA");
 
-        JTFusuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTFusuarioActionPerformed(evt);
-            }
-        });
-
-        JCHECKcpfRecepcionista.setText("selecionar");
-
-        JLBusuario3.setBackground(new java.awt.Color(88, 93, 96));
-        JLBusuario3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        JLBusuario3.setForeground(new java.awt.Color(101, 98, 98));
-        JLBusuario3.setText("Nome ");
-
         JTFusuario2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTFusuario2ActionPerformed(evt);
@@ -120,8 +103,6 @@ public class Tela_Consultar_Recepcionista extends javax.swing.JFrame {
         JBTsair2.setText("Listar todos");
         JBTsair2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        JCHECKnomeRecepcionista.setText("selecionar");
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -134,18 +115,10 @@ public class Tela_Consultar_Recepcionista extends javax.swing.JFrame {
                             .addComponent(JLBusuario2)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(JTFusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(JCHECKnomeRecepcionista))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(JTFusuario2, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(JCHECKcpfRecepcionista))
-                                    .addComponent(JLBusuario3)
+                                    .addComponent(JTFusuario2, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(JLBusuario4)
                                     .addComponent(JLBversion2))
-                                .addGap(6, 6, 6))))
+                                .addGap(32, 32, 32))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(95, 95, 95)
                         .addComponent(JBTsair1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -163,18 +136,10 @@ public class Tela_Consultar_Recepcionista extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(JLBusuario2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
-                .addComponent(JLBusuario3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JTFusuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JCHECKnomeRecepcionista))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(110, 110, 110)
                 .addComponent(JLBusuario4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(JCHECKcpfRecepcionista)
-                    .addComponent(JTFusuario2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(JTFusuario2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(JLBversion2)
                 .addGap(18, 18, 18)
@@ -238,10 +203,6 @@ public class Tela_Consultar_Recepcionista extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void JTFusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFusuarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JTFusuarioActionPerformed
-
     private void JTFusuario2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFusuario2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JTFusuario2ActionPerformed
@@ -278,14 +239,13 @@ public class Tela_Consultar_Recepcionista extends javax.swing.JFrame {
             // Extraímos os valores do JSON
             String nome = jsonObject.optString("nome", "Não informado");
             String cpfRecebido = jsonObject.optString("cpf", "Não informado");
-            
-            // Exibe os dados no JOptionPane
-            String recepcionistaInfo = "Nome: " + nome + "\n" +
-                               "CPF: " + cpfRecebido + "\n" ;
-                               
+            String telefone = jsonObject.optString("telefone", "Não informado");
 
-            JOptionPane.showMessageDialog(this, recepcionistaInfo, "Dados do Recepcionista", JOptionPane.INFORMATION_MESSAGE);
-
+            // Passa os dados para a tela de resultado
+            Tela_Resultado_Consulta_Recepcionista telaResultado = new Tela_Resultado_Consulta_Recepcionista();
+            telaResultado.exibirDadosRecepcionista(nome, cpfRecebido, telefone);
+            telaResultado.setVisible(true);
+            this.dispose(); // Fecha a tela atual
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Erro ao processar os dados: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
         }
@@ -331,18 +291,14 @@ public class Tela_Consultar_Recepcionista extends javax.swing.JFrame {
     private javax.swing.JButton JBTsair;
     private javax.swing.JButton JBTsair1;
     private javax.swing.JButton JBTsair2;
-    private javax.swing.JCheckBox JCHECKcpfRecepcionista;
-    private javax.swing.JCheckBox JCHECKnomeRecepcionista;
     private javax.swing.JLabel JLBiconeClinica;
     private javax.swing.JLabel JLBnomeClinica;
     private javax.swing.JLabel JLBnomeClinica1;
     private javax.swing.JLabel JLBusuario2;
-    private javax.swing.JLabel JLBusuario3;
     private javax.swing.JLabel JLBusuario4;
     private javax.swing.JLabel JLBversion;
     private javax.swing.JLabel JLBversion1;
     private javax.swing.JLabel JLBversion2;
-    private javax.swing.JTextField JTFusuario;
     private javax.swing.JTextField JTFusuario2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
