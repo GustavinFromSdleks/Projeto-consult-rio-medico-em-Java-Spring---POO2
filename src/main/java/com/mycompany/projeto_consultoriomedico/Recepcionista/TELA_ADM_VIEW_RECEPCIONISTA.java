@@ -6,6 +6,8 @@ package com.mycompany.projeto_consultoriomedico.Recepcionista;
 
 import com.mycompany.projeto_consultoriomedico.Adm.Tela_Excluir_User;
 import com.mycompany.projeto_consultoriomedico.Adm.Tela_Dashboard_Adm;
+import com.mycompany.projeto_consultoriomedico.Recepcionista.Tela_Cadastrar_Recepcionista;
+import com.mycompany.projeto_consultoriomedico.Recepcionista.Tela_Consultar_Recepcionista;
 import com.mycompany.projeto_consultoriomedico.TelaUtil;
 
 /**

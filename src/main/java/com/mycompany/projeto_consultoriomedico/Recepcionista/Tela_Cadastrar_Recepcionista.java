@@ -4,7 +4,6 @@
  */
 package com.mycompany.projeto_consultoriomedico.Recepcionista;
 
-import com.mycompany.projeto_consultoriomedico.Recepcionista.Tela_Adm_View_Recepcionista;
 import com.mycompany.projeto_consultoriomedico.Manager.RecepcionistaManager;
 import com.mycompany.projeto_consultoriomedico.TelaUtil;
 import javax.swing.JOptionPane;
