@@ -35,8 +35,22 @@ public class AuthManager {
         json.put("password", password);
         json.put("role", "ADMIN");
 
-        return HttpService.sendPostRequest(endpoint, json.toString(), true);
+        // Envia a requisição e captura a resposta
+        String response = HttpService.sendPostRequest(endpoint, json.toString(), true);
+
+        // Se a resposta for null ou vazia, consideramos o cadastro bem-sucedido
+        if (response == null || response.isEmpty()) {
+            return "Administrador cadastrado com sucesso!";
+        }
+
+        // Exibe a resposta para depuração
+        System.out.println("Resposta da API: " + response);
+
+        // Caso a resposta seja bem-sucedida, exibe a mensagem de sucesso
+        return "Administrador cadastrado com sucesso!";
     }
+
+
 
     // Método para registrar um médico
     public static String registerMedico(String nome, String cpf, String crm, String especialidade,

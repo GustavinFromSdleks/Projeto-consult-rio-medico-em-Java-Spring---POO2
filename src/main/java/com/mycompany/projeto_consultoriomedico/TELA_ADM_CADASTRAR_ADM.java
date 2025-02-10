@@ -4,6 +4,9 @@
  */
 package com.mycompany.projeto_consultoriomedico;
 
+import com.mycompany.projeto_consultoriomedico.Manager.AuthManager;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author User
@@ -39,6 +42,10 @@ public class TELA_ADM_CADASTRAR_ADM extends javax.swing.JFrame {
         JLBversion = new javax.swing.JLabel();
         JBTvoltar = new javax.swing.JButton();
         JBTsair = new javax.swing.JButton();
+        JLBsenha1 = new javax.swing.JLabel();
+        JTFsenha1 = new javax.swing.JTextField();
+        JLBsenha2 = new javax.swing.JLabel();
+        JTFsenha2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -102,7 +109,7 @@ public class TELA_ADM_CADASTRAR_ADM extends javax.swing.JFrame {
 
         JLBversion.setText("Version 0.01");
 
-        JBTvoltar.setText("Continuar ");
+        JBTvoltar.setText("Cadastrar");
         JBTvoltar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         JBTvoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,20 +125,34 @@ public class TELA_ADM_CADASTRAR_ADM extends javax.swing.JFrame {
             }
         });
 
+        JLBsenha1.setBackground(new java.awt.Color(88, 93, 96));
+        JLBsenha1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        JLBsenha1.setForeground(new java.awt.Color(101, 98, 98));
+        JLBsenha1.setText("Login");
+
+        JTFsenha1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTFsenha1ActionPerformed(evt);
+            }
+        });
+
+        JLBsenha2.setBackground(new java.awt.Color(88, 93, 96));
+        JLBsenha2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        JLBsenha2.setForeground(new java.awt.Color(101, 98, 98));
+        JLBsenha2.setText("Senha");
+
+        JTFsenha2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTFsenha2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(JLBsenha, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(JLBusuario1)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(JTFusuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
-                                .addComponent(JTFsenha, javax.swing.GroupLayout.Alignment.LEADING))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(17, 17, 17)
                         .addComponent(JLBusuario2))
@@ -143,7 +164,21 @@ public class TELA_ADM_CADASTRAR_ADM extends javax.swing.JFrame {
                         .addComponent(JLBversion))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(96, 96, 96)
-                        .addComponent(JBTvoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(JBTvoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(JTFsenha1, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(JTFsenha2, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(JLBsenha2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(JLBsenha, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(JLBusuario1)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(JTFusuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
+                                        .addComponent(JTFsenha, javax.swing.GroupLayout.Alignment.LEADING))
+                                    .addComponent(JLBsenha1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -159,6 +194,14 @@ public class TELA_ADM_CADASTRAR_ADM extends javax.swing.JFrame {
                 .addComponent(JLBsenha, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(JTFsenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(JLBsenha1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(JTFsenha2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(JLBsenha2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(JTFsenha1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(JBTvoltar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -201,8 +244,33 @@ public class TELA_ADM_CADASTRAR_ADM extends javax.swing.JFrame {
     }//GEN-LAST:event_JBTsairActionPerformed
 
     private void JBTvoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTvoltarActionPerformed
-        // TODO add your handling code here:
+        // Captura os dados inseridos pelo usuário nos campos de texto
+        String nome = JTFusuario.getText().trim();
+        String cpf = JTFsenha.getText().trim();
+        String login = JTFsenha2.getText().trim();
+        String password = JTFsenha1.getText().trim(); // Supondo que JTFsenha1 seja o campo de senha
+
+        // Verifica se algum campo está vazio
+        if(nome.isEmpty() || cpf.isEmpty() || login.isEmpty() || password.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Preencha todos os campos!", "Erro", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Chama o método de cadastro do AuthManager
+        String response = AuthManager.registerAdmin(nome, cpf, login, password);
+
+        // Exibe a resposta da API para o usuário
+        JOptionPane.showMessageDialog(this, response, "Cadastro", JOptionPane.INFORMATION_MESSAGE);
+
     }//GEN-LAST:event_JBTvoltarActionPerformed
+
+    private void JTFsenha1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFsenha1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JTFsenha1ActionPerformed
+
+    private void JTFsenha2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFsenha2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JTFsenha2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -245,10 +313,14 @@ public class TELA_ADM_CADASTRAR_ADM extends javax.swing.JFrame {
     private javax.swing.JLabel JLBiconeClinica;
     private javax.swing.JLabel JLBnomeClinica;
     private javax.swing.JLabel JLBsenha;
+    private javax.swing.JLabel JLBsenha1;
+    private javax.swing.JLabel JLBsenha2;
     private javax.swing.JLabel JLBusuario1;
     private javax.swing.JLabel JLBusuario2;
     private javax.swing.JLabel JLBversion;
     private javax.swing.JTextField JTFsenha;
+    private javax.swing.JTextField JTFsenha1;
+    private javax.swing.JTextField JTFsenha2;
     private javax.swing.JTextField JTFusuario;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
