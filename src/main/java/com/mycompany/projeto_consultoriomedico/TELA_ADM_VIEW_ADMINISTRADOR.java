@@ -40,8 +40,6 @@ public class TELA_ADM_VIEW_ADMINISTRADOR extends javax.swing.JFrame {
         JBTvoltar = new javax.swing.JButton();
         JBTsair = new javax.swing.JButton();
         JLBsubtitulo = new javax.swing.JLabel();
-        JBTselectMedico = new javax.swing.JButton();
-        JBTselectRecepcionista = new javax.swing.JButton();
         JLBtitulo = new javax.swing.JLabel();
         JBTselectMedico1 = new javax.swing.JButton();
 
@@ -181,29 +179,6 @@ public class TELA_ADM_VIEW_ADMINISTRADOR extends javax.swing.JFrame {
         JLBsubtitulo.setForeground(new java.awt.Color(94, 94, 94));
         JLBsubtitulo.setText("Gerenciando Administrador");
 
-        JBTselectMedico.setBackground(new java.awt.Color(245, 245, 245));
-        JBTselectMedico.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        JBTselectMedico.setForeground(new java.awt.Color(94, 94, 94));
-        JBTselectMedico.setText("MEDICO");
-        JBTselectMedico.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        JBTselectMedico.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        JBTselectMedico.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        JBTselectMedico.setIconTextGap(35);
-        JBTselectMedico.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JBTselectMedicoActionPerformed(evt);
-            }
-        });
-
-        JBTselectRecepcionista.setBackground(new java.awt.Color(245, 245, 245));
-        JBTselectRecepcionista.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        JBTselectRecepcionista.setForeground(new java.awt.Color(94, 94, 94));
-        JBTselectRecepcionista.setText("RECEPCIONISTA");
-        JBTselectRecepcionista.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        JBTselectRecepcionista.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        JBTselectRecepcionista.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        JBTselectRecepcionista.setIconTextGap(35);
-
         JLBtitulo.setBackground(new java.awt.Color(88, 93, 96));
         JLBtitulo.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         JLBtitulo.setForeground(new java.awt.Color(88, 93, 96));
@@ -244,10 +219,9 @@ public class TELA_ADM_VIEW_ADMINISTRADOR extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(JBTselectMedico1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(JLBsubtitulo)
-                                .addComponent(JBTselectRecepcionista, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(JBTselectMedico, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addGap(1, 1, 1)))))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -256,11 +230,7 @@ public class TELA_ADM_VIEW_ADMINISTRADOR extends javax.swing.JFrame {
                 .addComponent(JLBtitulo)
                 .addGap(51, 51, 51)
                 .addComponent(JLBsubtitulo)
-                .addGap(18, 18, 18)
-                .addComponent(JBTselectRecepcionista)
-                .addGap(18, 18, 18)
-                .addComponent(JBTselectMedico)
-                .addGap(18, 18, 18)
+                .addGap(102, 102, 102)
                 .addComponent(JBTselectMedico1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(JBTvoltar)
@@ -297,24 +267,6 @@ public class TELA_ADM_VIEW_ADMINISTRADOR extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JBTalterarRecepcionistaActionPerformed
 
-    private void JBTvoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTvoltarActionPerformed
-        this.dispose();
-         TELA_CENTRAL_ADM telaAnterior = new TELA_CENTRAL_ADM();
-         telaAnterior.setVisible(true);
-    }//GEN-LAST:event_JBTvoltarActionPerformed
-
-    private void JBTsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTsairActionPerformed
-         this.dispose();
-    }//GEN-LAST:event_JBTsairActionPerformed
-
-    private void JBTselectMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTselectMedicoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JBTselectMedicoActionPerformed
-
-    private void JBTselectMedico1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTselectMedico1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JBTselectMedico1ActionPerformed
-
     private void JBTconsultarRecepcionistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTconsultarRecepcionistaActionPerformed
         TELA_ADM_CONSULTAR_ADM TelaConsultADM = new TELA_ADM_CONSULTAR_ADM();
         TelaConsultADM.setVisible(true);
@@ -332,6 +284,20 @@ public class TELA_ADM_VIEW_ADMINISTRADOR extends javax.swing.JFrame {
         telaExclui.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_JBTexcluirRecepcionistaActionPerformed
+
+    private void JBTselectMedico1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTselectMedico1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JBTselectMedico1ActionPerformed
+
+    private void JBTsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTsairActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_JBTsairActionPerformed
+
+    private void JBTvoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTvoltarActionPerformed
+        this.dispose();
+        TELA_CENTRAL_ADM telaAnterior = new TELA_CENTRAL_ADM();
+        telaAnterior.setVisible(true);
+    }//GEN-LAST:event_JBTvoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -374,9 +340,7 @@ public class TELA_ADM_VIEW_ADMINISTRADOR extends javax.swing.JFrame {
     private javax.swing.JButton JBTconsultarRecepcionista;
     private javax.swing.JButton JBTexcluirRecepcionista;
     private javax.swing.JButton JBTsair;
-    private javax.swing.JButton JBTselectMedico;
     private javax.swing.JButton JBTselectMedico1;
-    private javax.swing.JButton JBTselectRecepcionista;
     private javax.swing.JButton JBTvoltar;
     private javax.swing.JLabel JLBiconeClinica;
     private javax.swing.JLabel JLBnomeClinica;

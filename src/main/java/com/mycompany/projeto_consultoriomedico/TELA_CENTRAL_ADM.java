@@ -261,12 +261,6 @@ public class TELA_CENTRAL_ADM extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_JBTsairActionPerformed
 
-    private void JBTselectMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTselectMedicoActionPerformed
-        TELA_ADM_VIEW_MEDICO telaAdmViewMed = new TELA_ADM_VIEW_MEDICO();
-        telaAdmViewMed.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_JBTselectMedicoActionPerformed
-
     private void JBTselectMedico1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTselectMedico1ActionPerformed
         TELA_ADM_VIEW_ADMINISTRADOR TelaViewADM = new TELA_ADM_VIEW_ADMINISTRADOR();
         TelaViewADM.setVisible(true);
@@ -278,6 +272,12 @@ public class TELA_CENTRAL_ADM extends javax.swing.JFrame {
         telaAdmViewRec .setVisible(true);
         this.dispose();
     }//GEN-LAST:event_JBTselectRecepcionistaActionPerformed
+
+    private void JBTselectMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTselectMedicoActionPerformed
+        TELA_ADM_VIEW_MEDICO telaAdmViewMed = new TELA_ADM_VIEW_MEDICO();
+        telaAdmViewMed.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_JBTselectMedicoActionPerformed
 
     /**
      * @param args the command line arguments
