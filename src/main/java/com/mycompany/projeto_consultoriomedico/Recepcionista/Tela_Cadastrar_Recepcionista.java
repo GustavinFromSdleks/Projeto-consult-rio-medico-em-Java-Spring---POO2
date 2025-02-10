@@ -351,7 +351,7 @@ public class Tela_Cadastrar_Recepcionista extends javax.swing.JFrame {
 
     private void JBTsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTsairActionPerformed
         this.dispose();
-         Tela_Adm_View_Recepcionista telaAnterior = new Tela_Adm_View_Recepcionista();
+         TTTT telaAnterior = new TTTT();
          telaAnterior.setVisible(true);
     }//GEN-LAST:event_JBTsairActionPerformed
 

@@ -5,7 +5,7 @@
 package com.mycompany.projeto_consultoriomedico.Adm;
 
 import com.mycompany.projeto_consultoriomedico.Medico.Tela_Adm_View_Medico;
-import com.mycompany.projeto_consultoriomedico.Recepcionista.Tela_Adm_View_Recepcionista;
+import com.mycompany.projeto_consultoriomedico.Recepcionista.TTTT;
 import com.mycompany.projeto_consultoriomedico.TelaUtil;
 import com.mycompany.projeto_consultoriomedico.Tela_Login;
 
@@ -274,7 +274,7 @@ public class Tela_Dashboard_Adm extends javax.swing.JFrame {
     }//GEN-LAST:event_JBTselectMedico1ActionPerformed
 
     private void JBTselectRecepcionistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTselectRecepcionistaActionPerformed
-        Tela_Adm_View_Recepcionista telaAdmViewRec = new Tela_Adm_View_Recepcionista();
+        TTTT telaAdmViewRec = new TTTT();
         telaAdmViewRec .setVisible(true);
         this.dispose();
     }//GEN-LAST:event_JBTselectRecepcionistaActionPerformed
