@@ -16,6 +16,7 @@ public class TELA_ADM_ALTERAR_DADOS_CONTATO extends javax.swing.JFrame {
     public TELA_ADM_ALTERAR_DADOS_CONTATO() {
         initComponents();
         setLocationRelativeTo(null);
+        TelaUtil.padronizarTela(this);
     }
 
     /**
